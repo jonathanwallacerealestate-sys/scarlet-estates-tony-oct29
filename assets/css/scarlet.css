@@ -203,3 +203,12 @@
 }
 .chip b{ white-space: nowrap; }
 .house .price, .house .ppsf{ overflow-wrap: anywhere; max-width:100%; }
+
+/* Make section O5C unmistakably letter-O, not zero */
+.num .letter-o{
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--orange);
+  margin-right: 1px;
+}
