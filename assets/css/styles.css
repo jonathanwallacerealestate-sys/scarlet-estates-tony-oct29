@@ -414,3 +414,20 @@ body.notes-on .notes-panel{ opacity:1; transform: translate(-50%, 0); }
 #s-lots .vid{ aspect-ratio:16/9; height: 46vh; width:auto; max-width:100%; min-height:0; }
 #s-lots .vid video{ object-fit:contain; background:#000; }
 @media (max-width: 900px){ #s-lots .cards{ grid-template-columns: repeat(2, minmax(0,1fr)); } #s-lots .vid{ width:100%; height:auto; } }
+
+
+/* Comps / long inventory slides must grow; scroll-snap still works with auto height */
+.slide.slide-grow,
+#s-solds, #s-waverley, #s-ppsf, #s-suggest, #s-models{
+  height: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: visible;
+}
+.slide.slide-grow > .content,
+#s-solds > .content, #s-waverley > .content, #s-ppsf > .content, #s-suggest > .content, #s-models > .content{
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  justify-content: flex-start;
+}

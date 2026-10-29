@@ -169,3 +169,58 @@
     setTimeout(function(){ fitAllMarkers(map); }, 600);
   }
 })();
+
+
+  // Floor-plan lightbox (models section)
+  (function(){
+    function parts(){
+      var lb = document.getElementById('fp-lightbox');
+      if (!lb) return null;
+      return {
+        lb: lb,
+        img: lb.querySelector('.fp-lb-img'),
+        link: lb.querySelector('.fp-lb-newtab'),
+        closeBtn: lb.querySelector('.fp-lb-close')
+      };
+    }
+    function openLb(src, alt){
+      var p = parts();
+      if (!p || !src) return;
+      p.img.src = src;
+      p.img.alt = alt || 'Floor plan enlarged';
+      p.link.href = src;
+      p.lb.hidden = false;
+      p.lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      p.closeBtn.focus();
+    }
+    function closeLb(){
+      var p = parts();
+      if (!p || p.lb.hidden) return;
+      p.lb.hidden = true;
+      p.lb.setAttribute('aria-hidden', 'true');
+      p.img.removeAttribute('src');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('click', function(e){
+      var btn = e.target.closest && e.target.closest('.fp-open');
+      if (btn){
+        e.preventDefault();
+        var src = btn.getAttribute('data-lightbox');
+        if (!src){
+          var im = btn.querySelector('img');
+          src = im && im.getAttribute('src');
+        }
+        var im2 = btn.querySelector('img');
+        openLb(src, im2 ? im2.alt : '');
+        return;
+      }
+      var p = parts();
+      if (p && !p.lb.hidden){
+        if (e.target === p.lb || e.target === p.closeBtn || (e.target.classList && e.target.classList.contains('fp-lb-close'))) closeLb();
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeLb();
+    });
+  })();

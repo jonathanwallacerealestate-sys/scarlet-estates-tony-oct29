@@ -6,8 +6,8 @@
 <title>Scarlett Estates Spec Pricing - Faris Team x MG Homes</title>
 <meta name="description" content="Scarlett Estates frontage-lot spec pricing for Tony Marcelli, MG Homes. Prepared by Jonathan Wallace, REALTOR®, with Sabrina Staunton.">
 <meta name="robots" content="noindex,nofollow">
-<link rel="stylesheet" href="assets/css/styles.css?v=1029m">
-<link rel="stylesheet" href="assets/css/scarlet.css?v=1029m">
+<link rel="stylesheet" href="assets/css/styles.css?v=1029r">
+<link rel="stylesheet" href="assets/css/scarlet.css?v=1029r">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script>document.documentElement.className += ' js';</script>
 
@@ -17,11 +17,21 @@
 .model-media{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);min-height:140px}
 .model-media img{width:100%;height:140px;object-fit:cover;background:#f4f1ec}
 .model-media img.fp{object-fit:contain;background:#fff}
+.model-media .fp-open{display:block;padding:0;margin:0;border:0;background:#fff;cursor:zoom-in;width:100%;height:140px;overflow:hidden}
+.model-media .fp-open img{height:100%;width:100%}
+.model-media .fp-open:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 .model-meta{padding:10px 12px 12px}
 .model-meta h3{margin:0 0 4px;font-size:calc(var(--u)*1.15)}
 .model-meta .src{font-size:.82em;color:var(--orange);text-decoration:none}
 .model-meta .src:hover{text-decoration:underline}
 @media (max-width:700px){.model-media{grid-template-columns:1fr}}
+.fp-lb{position:fixed;inset:0;z-index:120;background:rgba(12,10,8,.92);display:flex;align-items:center;justify-content:center;padding:4vh 4vw;touch-action:manipulation}
+.fp-lb[hidden]{display:none!important}
+.fp-lb-img{max-width:min(1200px,96vw);max-height:88vh;width:auto;height:auto;object-fit:contain;background:#fff;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.fp-lb-close{position:fixed;top:14px;right:16px;z-index:121;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:22px;cursor:pointer}
+.fp-lb-close:hover,.fp-lb-close:focus-visible{background:rgba(255,255,255,.3)}
+.fp-lb-newtab{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:121;color:#fff;background:rgba(237,93,34,.95);padding:10px 16px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600}
+@media (max-width:640px){.fp-lb{padding:2vh 2vw}.fp-lb-img{max-height:82vh}}
 </style>
 
 </head>
@@ -53,7 +63,7 @@
     <img class="mg r" style="--d:2" src="assets/img/mg-homes-logo.png" alt="MG Homes">
   </div>
   <div class="right">
-    <div class="photo kb"><img src="assets/img/scarlett-estates-site-plan-mg.jpg?v=1029m" alt="Scarlett Estates site plan"></div>
+    <div class="photo kb"><img src="assets/img/scarlett-estates-site-plan-mg.jpg?v=1029r" alt="Scarlett Estates site plan"></div>
     <div class="title">
       <h1 class="r" style="--d:2">Scarlett Estates <em>Spec Pricing</em></h1>
       <div class="sub r" style="--d:3">Frontage-lot strategy for Tony Marcelli · MG Homes</div>
@@ -115,7 +125,7 @@
     <h2 class="h r" style="--d:1">Tony's owned lots, with the Scarlett Line frontage marked</h2>
     <hr class="rule r" style="--d:1">
     <div class="r" style="--d:2;margin-top:calc(var(--u)*1)">
-      <img src="assets/img/scarlett-estates-site-plan-mg.jpg?v=1029m" alt="Scarlett Estates site plan with MG Homes owned lots highlighted in gold and Lot 7 frontage spec in orange" style="width:100%;max-height:62vh;object-fit:contain;border-radius:6px;border:1px solid var(--line);background:#fff">
+      <img src="assets/img/scarlett-estates-site-plan-mg.jpg?v=1029r" alt="Scarlett Estates site plan with MG Homes owned lots highlighted in gold and Lot 7 frontage spec in orange" style="width:100%;max-height:62vh;object-fit:contain;border-radius:6px;border:1px solid var(--line);background:#fff">
     </div>
     <div class="chips r" style="--d:3;margin-top:calc(var(--u)*1)">
       <span class="chip">MG Homes (Tony) owns: Lots 4, 7, 13, 14</span>
@@ -144,7 +154,7 @@
   <aside class="notes">Zoom Scarlett first, then pan to Braestone / Horseshoe solds and Waverley. Map uses OpenStreetMap via Leaflet.</aside>
 </section>
 
-<section class="slide" id="s-waverley" data-title="Direct competition">
+<section class="slide slide-grow" id="s-waverley" data-title="Direct competition">
   <div class="content">
     <div class="eyebrow r"><span class="num">04</span> Direct competition</div>
     <h2 class="h r" style="--d:1">Waverley Heights by Corsica Homes</h2>
@@ -184,7 +194,7 @@
 </section>
 
 
-<section class="slide" id="s-ppsf" data-title="Price per sq ft">
+<section class="slide slide-grow" id="s-ppsf" data-title="Price per sq ft">
   <div class="content">
     <div class="eyebrow r"><span class="num">05b</span> Sold comps · price per sq ft</div>
     <h2 class="h r" style="--d:1">Unfinished basements are the cleanest comps for a spec</h2>
@@ -220,7 +230,7 @@
 </section>
 
 
-<section class="slide dark" id="s-suggest" data-title="Suggested price">
+<section class="slide slide-grow dark" id="s-suggest" data-title="Suggested price">
   <div class="content">
     <div class="eyebrow r"><span class="num">O5C</span> Suggested Scarlett Line spec price</div>
     <h2 class="h r" style="--d:1">Suggested list: <em class="money">$1,089,900</em></h2>
@@ -251,7 +261,7 @@
   <aside class="notes">Frame mid at ~2,000 sf ≈ $1,032,000 from unfinished median. Still sits under Waverley $1.2–$1.3M band at mid for 1,800–2,000 sf. High end overlaps Tony’s $1.3–$1.5 note — flag that high uses the smallest unfinished sold’s mid-band sq ft (43 Thoroughbred).</aside>
 </section>
 
-<section class="slide dark" id="s-pricing" data-title="Pricing position">
+<section class="slide slide-grow dark" id="s-pricing" data-title="Pricing position">
   <div class="content">
     <div class="eyebrow r"><span class="num">05</span> Pricing position</div>
     <h2 class="h r" style="--d:1">Scarlett Line spec sits sharply under Waverley</h2>
@@ -289,14 +299,14 @@
   <aside class="notes">Median sold of the REALM comps is $1,250,000. Asking $1,089,900 on the frontage undercuts both Waverley lists and the sold median. Includes 3316 Line 4 N at $1,450,000.</aside>
 </section>
 
-<section class="slide" id="s-solds" data-title="Sold comps">
-  <div class="content" style="overflow:auto">
+<section class="slide slide-grow" id="s-solds" data-title="Sold comps">
+  <div class="content">
     <div class="eyebrow r"><span class="num">06</span> Sold comps from today's REALM share</div>
     <h2 class="h r" style="--d:1">Nine solds · REALM prices · photo carousels</h2>
     <hr class="rule r" style="--d:1">
     <div class="house-grid">
-      
-      <article class="house r" style="--d:2" data-pocket="Horseshoe Valley">
+      <div class="pocket-head">Horseshoe Valley</div>
+<article class="house r" style="--d:2" data-pocket="Horseshoe Valley">
         <div class="car" data-carousel data-n="10">
         <div class="c-track"><figure class="c-slide on"><img src="assets/photos/18-bridle/01.jpg" alt="18 Bridle Path photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/02.jpg" alt="18 Bridle Path photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/03.jpg" alt="18 Bridle Path photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/04.jpg" alt="18 Bridle Path photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/05.jpg" alt="18 Bridle Path photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/06.jpg" alt="18 Bridle Path photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/07.jpg" alt="18 Bridle Path photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/08.jpg" alt="18 Bridle Path photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/09.jpg" alt="18 Bridle Path photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/18-bridle/10.jpg" alt="18 Bridle Path photo 10" loading="lazy"></figure></div>
         <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
@@ -316,107 +326,7 @@
           <div class="cite">Source of record: REALM MLS share (sold $1,250,000)</div>
         </div>
       </article>
-      <article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
-        <div class="car" data-carousel data-n="9">
-        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/2-thoroughbred/01.jpg" alt="2 Thoroughbred Dr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/02.jpg" alt="2 Thoroughbred Dr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/03.jpg" alt="2 Thoroughbred Dr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/04.jpg" alt="2 Thoroughbred Dr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/05.jpg" alt="2 Thoroughbred Dr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/06.jpg" alt="2 Thoroughbred Dr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/07.jpg" alt="2 Thoroughbred Dr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/08.jpg" alt="2 Thoroughbred Dr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/09.jpg" alt="2 Thoroughbred Dr photo 9" loading="lazy"></figure></div>
-        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
-        <button type="button" class="c-next" aria-label="Next photo">›</button>
-        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button></div>
-        <div class="c-count"><span class="c-cur">1</span>/9</div>
-      </div>
-        <div class="body">
-          <div class="addr">2 Thoroughbred Dr</div>
-          <div class="area">Oro-Medonte · Braestone</div>
-          <div class="facts">
-            <span>3+1 bed</span><span>3 bath</span><span>2000-2500 sq ft</span><span>Detached Bungalow Sold</span>
-          </div>
-          <div class="price">$1,200,000<small>Listed $1,275,000 · 69 DOM · #S13659548</small></div>
-          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$533 / sq ft above grade <span style="opacity:.85">( midpoint of 2000–2500 )</span></div>
-          <div class="finish">Modern farmhouse with board-and-batten and stone; tray-ceiling great room with chevron wood fireplace wall; quartz island kitchen with pro range; primary with limewash walls and barn door; glass shower with patterned wallpaper.</div>
-          <div class="cite">Source of record: REALM MLS share (sold $1,200,000)</div>
-        </div>
-      </article>
-      <article class="house r" style="--d:2" data-pocket="Sugarbush">
-        <div class="car" data-carousel data-n="10">
-        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/1-topaz/01.jpg" alt="1 Topaz Crt photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/02.jpg" alt="1 Topaz Crt photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/03.jpg" alt="1 Topaz Crt photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/04.jpg" alt="1 Topaz Crt photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/05.jpg" alt="1 Topaz Crt photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/06.jpg" alt="1 Topaz Crt photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/07.jpg" alt="1 Topaz Crt photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/08.jpg" alt="1 Topaz Crt photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/09.jpg" alt="1 Topaz Crt photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/10.jpg" alt="1 Topaz Crt photo 10" loading="lazy"></figure></div>
-        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
-        <button type="button" class="c-next" aria-label="Next photo">›</button>
-        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
-        <div class="c-count"><span class="c-cur">1</span>/10</div>
-      </div>
-        <div class="body">
-          <div class="addr">1 Topaz Crt</div>
-          <div class="area">Oro-Medonte · Sugarbush</div>
-          <div class="facts">
-            <span>3 bed</span><span>3 bath</span><span>1500-2000 sq ft</span><span>Detached Bungalow Sold</span>
-          </div>
-          <div class="price">$1,230,000<small>Listed $1,290,000 · 95 DOM · #S13538672</small></div>
-          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$703 / sq ft above grade <span style="opacity:.85">( midpoint of 1500–2000 )</span></div>
-          <div class="finish">Stone-and-brick bungalow on a wooded Sugarbush lot; espresso cabinetry and granite island kitchen; formal dining with tray ceiling; marble-look ensuite with corner soaker and glass shower; multi-level deck and fire-pit patio.</div>
-          <div class="cite">Source of record: REALM MLS share (sold $1,230,000)</div>
-        </div>
-      </article>
-      <article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
-        <div class="car" data-carousel data-n="10">
-        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/14-georgian/01.jpg" alt="14 Georgian Grande Dr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/02.jpg" alt="14 Georgian Grande Dr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/03.jpg" alt="14 Georgian Grande Dr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/04.jpg" alt="14 Georgian Grande Dr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/05.jpg" alt="14 Georgian Grande Dr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/06.jpg" alt="14 Georgian Grande Dr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/07.jpg" alt="14 Georgian Grande Dr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/08.jpg" alt="14 Georgian Grande Dr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/09.jpg" alt="14 Georgian Grande Dr photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/10.jpg" alt="14 Georgian Grande Dr photo 10" loading="lazy"></figure></div>
-        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
-        <button type="button" class="c-next" aria-label="Next photo">›</button>
-        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
-        <div class="c-count"><span class="c-cur">1</span>/10</div>
-      </div>
-        <div class="body">
-          <div class="addr">14 Georgian Grande Dr</div>
-          <div class="area">Oro-Medonte · Braestone</div>
-          <div class="facts">
-            <span>3 bed</span><span>3 bath</span><span>2000-2500 sq ft</span><span>Detached Bungaloft Sold</span>
-          </div>
-          <div class="price">$1,200,000<small>Listed $1,295,000 · 19 DOM · #S13040266</small></div>
-          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$500 / sq ft above grade</div>
-          <div class="finish">Braestone bungaloft with porch and stone accents; open kitchen with mixed cabinetry and pro gas range; vaulted great room with fireplace; bright primary with chandelier; laundry/mud finishes; stone patio overlooking Braestone farm views.</div>
-          <div class="cite">Source of record: REALM MLS share (sold $1,200,000)</div>
-        </div>
-      </article>
-      <article class="house r" style="--d:2" data-pocket="Springwater">
-        <div class="car" data-carousel data-n="10">
-        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/67-doran/01.jpg" alt="67 Doran Rd photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/02.jpg" alt="67 Doran Rd photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/03.jpg" alt="67 Doran Rd photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/04.jpg" alt="67 Doran Rd photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/05.jpg" alt="67 Doran Rd photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/06.jpg" alt="67 Doran Rd photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/07.jpg" alt="67 Doran Rd photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/08.jpg" alt="67 Doran Rd photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/09.jpg" alt="67 Doran Rd photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/10.jpg" alt="67 Doran Rd photo 10" loading="lazy"></figure></div>
-        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
-        <button type="button" class="c-next" aria-label="Next photo">›</button>
-        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
-        <div class="c-count"><span class="c-cur">1</span>/10</div>
-      </div>
-        <div class="body">
-          <div class="addr">67 Doran Rd</div>
-          <div class="area">Springwater · Midhurst</div>
-          <div class="facts">
-            <span>4 bed</span><span>3 bath</span><span>2500-3000 sq ft</span><span>Detached 2-Storey Sold</span>
-          </div>
-          <div class="price">$1,250,000<small>Listed $1,299,000 · 25 DOM · #S13646228</small></div>
-          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$421 / sq ft above grade</div>
-          <div class="finish">Modern farmhouse with stone and timber porch; white kitchen with butcher-block tops and herringbone tile; floor-to-ceiling stone fireplace; light-wood primary; covered porch swing; wooded lot with fire pit, pergola and pool.</div>
-          <div class="cite">Source of record: REALM MLS share (sold $1,250,000)</div>
-        </div>
-      </article>
-      <article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
-        <div class="car" data-carousel data-n="10">
-        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/43-thoroughbred/01.jpg" alt="43 Thoroughbred Dr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/02.jpg" alt="43 Thoroughbred Dr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/03.jpg" alt="43 Thoroughbred Dr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/04.jpg" alt="43 Thoroughbred Dr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/05.jpg" alt="43 Thoroughbred Dr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/06.jpg" alt="43 Thoroughbred Dr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/07.jpg" alt="43 Thoroughbred Dr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/08.jpg" alt="43 Thoroughbred Dr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/09.jpg" alt="43 Thoroughbred Dr photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/10.jpg" alt="43 Thoroughbred Dr photo 10" loading="lazy"></figure></div>
-        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
-        <button type="button" class="c-next" aria-label="Next photo">›</button>
-        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
-        <div class="c-count"><span class="c-cur">1</span>/10</div>
-      </div>
-        <div class="body">
-          <div class="addr">43 Thoroughbred Dr</div>
-          <div class="area">Oro-Medonte · Braestone</div>
-          <div class="facts">
-            <span>2 bed</span><span>2 bath</span><span>1500-2000 sq ft</span><span>Detached Bungalow Sold</span>
-          </div>
-          <div class="price">$1,290,000<small>Listed $1,335,000 · 92 DOM · #S12744958</small></div>
-          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$737 / sq ft above grade <span style="opacity:.85">( midpoint of 1500–2000 )</span></div>
-          <div class="finish">Charcoal bungalow with stone skirt and triple garage; white kitchen with dark island and pro range; vaulted great room with built-ins and fireplace; spa ensuite with glass shower and soaker; wooded Braestone trails.</div>
-          <div class="cite">Source of record: REALM MLS share (sold $1,290,000)</div>
-        </div>
-      </article>
-      <article class="house r" style="--d:2" data-pocket="Horseshoe Valley">
+<article class="house r" style="--d:2" data-pocket="Horseshoe Valley">
         <div class="car" data-carousel data-n="9">
         <div class="c-track"><figure class="c-slide on"><img src="assets/photos/17-pine-ridge/01.jpg" alt="17 Pine Ridge Tr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/02.jpg" alt="17 Pine Ridge Tr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/03.jpg" alt="17 Pine Ridge Tr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/04.jpg" alt="17 Pine Ridge Tr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/05.jpg" alt="17 Pine Ridge Tr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/06.jpg" alt="17 Pine Ridge Tr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/07.jpg" alt="17 Pine Ridge Tr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/08.jpg" alt="17 Pine Ridge Tr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-pine-ridge/09.jpg" alt="17 Pine Ridge Tr photo 9" loading="lazy"></figure></div>
         <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
@@ -436,27 +346,7 @@
           <div class="cite">Source of record: REALM MLS share (sold $1,300,000)</div>
         </div>
       </article>
-      <article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
-        <div class="car" data-carousel data-n="10">
-        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/17-clydesdale/01.jpg" alt="17 Clydesdale Crt photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/02.jpg" alt="17 Clydesdale Crt photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/03.jpg" alt="17 Clydesdale Crt photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/04.jpg" alt="17 Clydesdale Crt photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/05.jpg" alt="17 Clydesdale Crt photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/06.jpg" alt="17 Clydesdale Crt photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/07.jpg" alt="17 Clydesdale Crt photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/08.jpg" alt="17 Clydesdale Crt photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/09.jpg" alt="17 Clydesdale Crt photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/10.jpg" alt="17 Clydesdale Crt photo 10" loading="lazy"></figure></div>
-        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
-        <button type="button" class="c-next" aria-label="Next photo">›</button>
-        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
-        <div class="c-count"><span class="c-cur">1</span>/10</div>
-      </div>
-        <div class="body">
-          <div class="addr">17 Clydesdale Crt</div>
-          <div class="area">Oro-Medonte · Braestone</div>
-          <div class="facts">
-            <span>3+1 bed</span><span>4 bath</span><span>2000-2500 sq ft</span><span>Detached Bungalow-Raised Sold</span>
-          </div>
-          <div class="price">$1,350,000<small>Listed $1,429,000 · 66 DOM · #S12708264</small></div>
-          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$647 / sq ft above grade</div>
-          <div class="finish">White modern farmhouse with black trim and stone skirt; navy island with waterfall quartz; vaulted open great room; bright primary; covered rear patio; aerial estate setting against forest.</div>
-          <div class="cite">Source of record: REALM MLS share (sold $1,350,000)</div>
-        </div>
-      </article>
-      <article class="house r" style="--d:2" data-pocket="Horseshoe Valley">
+<article class="house r" style="--d:2" data-pocket="Horseshoe Valley">
         <div class="car" data-carousel data-n="9">
         <div class="c-track"><figure class="c-slide on"><img src="assets/photos/3316-line4/01.jpg" alt="3316 Line 4 N photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/02.jpg" alt="3316 Line 4 N photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/03.jpg" alt="3316 Line 4 N photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/04.jpg" alt="3316 Line 4 N photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/05.jpg" alt="3316 Line 4 N photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/06.jpg" alt="3316 Line 4 N photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/07.jpg" alt="3316 Line 4 N photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/08.jpg" alt="3316 Line 4 N photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/3316-line4/09.jpg" alt="3316 Line 4 N photo 9" loading="lazy"></figure></div>
         <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
@@ -476,9 +366,130 @@
           <div class="cite">Source of record: REALM MLS share (sold $1,450,000)</div>
         </div>
       </article>
+      <div class="pocket-head">Braestone / Thoroughbred</div>
+<article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
+        <div class="car" data-carousel data-n="9">
+        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/2-thoroughbred/01.jpg" alt="2 Thoroughbred Dr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/02.jpg" alt="2 Thoroughbred Dr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/03.jpg" alt="2 Thoroughbred Dr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/04.jpg" alt="2 Thoroughbred Dr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/05.jpg" alt="2 Thoroughbred Dr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/06.jpg" alt="2 Thoroughbred Dr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/07.jpg" alt="2 Thoroughbred Dr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/08.jpg" alt="2 Thoroughbred Dr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/2-thoroughbred/09.jpg" alt="2 Thoroughbred Dr photo 9" loading="lazy"></figure></div>
+        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="c-next" aria-label="Next photo">›</button>
+        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button></div>
+        <div class="c-count"><span class="c-cur">1</span>/9</div>
+      </div>
+        <div class="body">
+          <div class="addr">2 Thoroughbred Dr</div>
+          <div class="area">Oro-Medonte · Braestone</div>
+          <div class="facts">
+            <span>3+1 bed</span><span>3 bath</span><span>2000-2500 sq ft</span><span>Detached Bungalow Sold</span>
+          </div>
+          <div class="price">$1,200,000<small>Listed $1,275,000 · 69 DOM · #S13659548</small></div>
+          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$533 / sq ft above grade <span style="opacity:.85">( midpoint of 2000–2500 )</span></div>
+          <div class="finish">Modern farmhouse with board-and-batten and stone; tray-ceiling great room with chevron wood fireplace wall; quartz island kitchen with pro range; primary with limewash walls and barn door; glass shower with patterned wallpaper.</div>
+          <div class="cite">Source of record: REALM MLS share (sold $1,200,000)</div>
+        </div>
+      </article>
+<article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
+        <div class="car" data-carousel data-n="10">
+        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/14-georgian/01.jpg" alt="14 Georgian Grande Dr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/02.jpg" alt="14 Georgian Grande Dr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/03.jpg" alt="14 Georgian Grande Dr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/04.jpg" alt="14 Georgian Grande Dr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/05.jpg" alt="14 Georgian Grande Dr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/06.jpg" alt="14 Georgian Grande Dr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/07.jpg" alt="14 Georgian Grande Dr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/08.jpg" alt="14 Georgian Grande Dr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/09.jpg" alt="14 Georgian Grande Dr photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/14-georgian/10.jpg" alt="14 Georgian Grande Dr photo 10" loading="lazy"></figure></div>
+        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="c-next" aria-label="Next photo">›</button>
+        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
+        <div class="c-count"><span class="c-cur">1</span>/10</div>
+      </div>
+        <div class="body">
+          <div class="addr">14 Georgian Grande Dr</div>
+          <div class="area">Oro-Medonte · Braestone</div>
+          <div class="facts">
+            <span>3 bed</span><span>3 bath</span><span>2000-2500 sq ft</span><span>Detached Bungaloft Sold</span>
+          </div>
+          <div class="price">$1,200,000<small>Listed $1,295,000 · 19 DOM · #S13040266</small></div>
+          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$500 / sq ft above grade</div>
+          <div class="finish">Braestone bungaloft with porch and stone accents; open kitchen with mixed cabinetry and pro gas range; vaulted great room with fireplace; bright primary with chandelier; laundry/mud finishes; stone patio overlooking Braestone farm views.</div>
+          <div class="cite">Source of record: REALM MLS share (sold $1,200,000)</div>
+        </div>
+      </article>
+<article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
+        <div class="car" data-carousel data-n="10">
+        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/43-thoroughbred/01.jpg" alt="43 Thoroughbred Dr photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/02.jpg" alt="43 Thoroughbred Dr photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/03.jpg" alt="43 Thoroughbred Dr photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/04.jpg" alt="43 Thoroughbred Dr photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/05.jpg" alt="43 Thoroughbred Dr photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/06.jpg" alt="43 Thoroughbred Dr photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/07.jpg" alt="43 Thoroughbred Dr photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/08.jpg" alt="43 Thoroughbred Dr photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/09.jpg" alt="43 Thoroughbred Dr photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/43-thoroughbred/10.jpg" alt="43 Thoroughbred Dr photo 10" loading="lazy"></figure></div>
+        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="c-next" aria-label="Next photo">›</button>
+        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
+        <div class="c-count"><span class="c-cur">1</span>/10</div>
+      </div>
+        <div class="body">
+          <div class="addr">43 Thoroughbred Dr</div>
+          <div class="area">Oro-Medonte · Braestone</div>
+          <div class="facts">
+            <span>2 bed</span><span>2 bath</span><span>1500-2000 sq ft</span><span>Detached Bungalow Sold</span>
+          </div>
+          <div class="price">$1,290,000<small>Listed $1,335,000 · 92 DOM · #S12744958</small></div>
+          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$737 / sq ft above grade <span style="opacity:.85">( midpoint of 1500–2000 )</span></div>
+          <div class="finish">Charcoal bungalow with stone skirt and triple garage; white kitchen with dark island and pro range; vaulted great room with built-ins and fireplace; spa ensuite with glass shower and soaker; wooded Braestone trails.</div>
+          <div class="cite">Source of record: REALM MLS share (sold $1,290,000)</div>
+        </div>
+      </article>
+<article class="house r" style="--d:2" data-pocket="Braestone / Thoroughbred">
+        <div class="car" data-carousel data-n="10">
+        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/17-clydesdale/01.jpg" alt="17 Clydesdale Crt photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/02.jpg" alt="17 Clydesdale Crt photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/03.jpg" alt="17 Clydesdale Crt photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/04.jpg" alt="17 Clydesdale Crt photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/05.jpg" alt="17 Clydesdale Crt photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/06.jpg" alt="17 Clydesdale Crt photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/07.jpg" alt="17 Clydesdale Crt photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/08.jpg" alt="17 Clydesdale Crt photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/09.jpg" alt="17 Clydesdale Crt photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/17-clydesdale/10.jpg" alt="17 Clydesdale Crt photo 10" loading="lazy"></figure></div>
+        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="c-next" aria-label="Next photo">›</button>
+        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
+        <div class="c-count"><span class="c-cur">1</span>/10</div>
+      </div>
+        <div class="body">
+          <div class="addr">17 Clydesdale Crt</div>
+          <div class="area">Oro-Medonte · Braestone</div>
+          <div class="facts">
+            <span>3+1 bed</span><span>4 bath</span><span>2000-2500 sq ft</span><span>Detached Bungalow-Raised Sold</span>
+          </div>
+          <div class="price">$1,350,000<small>Listed $1,429,000 · 66 DOM · #S12708264</small></div>
+          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$647 / sq ft above grade</div>
+          <div class="finish">White modern farmhouse with black trim and stone skirt; navy island with waterfall quartz; vaulted open great room; bright primary; covered rear patio; aerial estate setting against forest.</div>
+          <div class="cite">Source of record: REALM MLS share (sold $1,350,000)</div>
+        </div>
+      </article>
+      <div class="pocket-head">Sugarbush</div>
+<article class="house r" style="--d:2" data-pocket="Sugarbush">
+        <div class="car" data-carousel data-n="10">
+        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/1-topaz/01.jpg" alt="1 Topaz Crt photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/02.jpg" alt="1 Topaz Crt photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/03.jpg" alt="1 Topaz Crt photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/04.jpg" alt="1 Topaz Crt photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/05.jpg" alt="1 Topaz Crt photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/06.jpg" alt="1 Topaz Crt photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/07.jpg" alt="1 Topaz Crt photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/08.jpg" alt="1 Topaz Crt photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/09.jpg" alt="1 Topaz Crt photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/1-topaz/10.jpg" alt="1 Topaz Crt photo 10" loading="lazy"></figure></div>
+        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="c-next" aria-label="Next photo">›</button>
+        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
+        <div class="c-count"><span class="c-cur">1</span>/10</div>
+      </div>
+        <div class="body">
+          <div class="addr">1 Topaz Crt</div>
+          <div class="area">Oro-Medonte · Sugarbush</div>
+          <div class="facts">
+            <span>3 bed</span><span>3 bath</span><span>1500-2000 sq ft</span><span>Detached Bungalow Sold</span>
+          </div>
+          <div class="price">$1,230,000<small>Listed $1,290,000 · 95 DOM · #S13538672</small></div>
+          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$703 / sq ft above grade <span style="opacity:.85">( midpoint of 1500–2000 )</span></div>
+          <div class="finish">Stone-and-brick bungalow on a wooded Sugarbush lot; espresso cabinetry and granite island kitchen; formal dining with tray ceiling; marble-look ensuite with corner soaker and glass shower; multi-level deck and fire-pit patio.</div>
+          <div class="cite">Source of record: REALM MLS share (sold $1,230,000)</div>
+        </div>
+      </article>
+      <div class="pocket-head">Springwater</div>
+<article class="house r" style="--d:2" data-pocket="Springwater">
+        <div class="car" data-carousel data-n="10">
+        <div class="c-track"><figure class="c-slide on"><img src="assets/photos/67-doran/01.jpg" alt="67 Doran Rd photo 1" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/02.jpg" alt="67 Doran Rd photo 2" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/03.jpg" alt="67 Doran Rd photo 3" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/04.jpg" alt="67 Doran Rd photo 4" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/05.jpg" alt="67 Doran Rd photo 5" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/06.jpg" alt="67 Doran Rd photo 6" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/07.jpg" alt="67 Doran Rd photo 7" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/08.jpg" alt="67 Doran Rd photo 8" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/09.jpg" alt="67 Doran Rd photo 9" loading="lazy"></figure><figure class="c-slide"><img src="assets/photos/67-doran/10.jpg" alt="67 Doran Rd photo 10" loading="lazy"></figure></div>
+        <button type="button" class="c-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="c-next" aria-label="Next photo">›</button>
+        <div class="c-dots"><button type="button" class="c-dot on" data-i="0" aria-label="Photo 1"></button><button type="button" class="c-dot" data-i="1" aria-label="Photo 2"></button><button type="button" class="c-dot" data-i="2" aria-label="Photo 3"></button><button type="button" class="c-dot" data-i="3" aria-label="Photo 4"></button><button type="button" class="c-dot" data-i="4" aria-label="Photo 5"></button><button type="button" class="c-dot" data-i="5" aria-label="Photo 6"></button><button type="button" class="c-dot" data-i="6" aria-label="Photo 7"></button><button type="button" class="c-dot" data-i="7" aria-label="Photo 8"></button><button type="button" class="c-dot" data-i="8" aria-label="Photo 9"></button><button type="button" class="c-dot" data-i="9" aria-label="Photo 10"></button></div>
+        <div class="c-count"><span class="c-cur">1</span>/10</div>
+      </div>
+        <div class="body">
+          <div class="addr">67 Doran Rd</div>
+          <div class="area">Springwater · Midhurst</div>
+          <div class="facts">
+            <span>4 bed</span><span>3 bath</span><span>2500-3000 sq ft</span><span>Detached 2-Storey Sold</span>
+          </div>
+          <div class="price">$1,250,000<small>Listed $1,299,000 · 25 DOM · #S13646228</small></div>
+          <div class="ppsf" style="margin-top:4px;font-size:calc(var(--u)*1.05);font-weight:600;color:var(--ink)">$421 / sq ft above grade</div>
+          <div class="finish">Modern farmhouse with stone and timber porch; white kitchen with butcher-block tops and herringbone tile; floor-to-ceiling stone fireplace; light-wood primary; covered porch swing; wooded lot with fire pit, pergola and pool.</div>
+          <div class="cite">Source of record: REALM MLS share (sold $1,250,000)</div>
+        </div>
+      </article>
     </div>
-    <div class="cite-block r" style="--d:4">Source of record: Outlook REALM email "Listing(s) for your review" received Oct 29, 2026, 10:59 America/Toronto. Sold prices, list prices, sq ft ranges and DOM from REALM facts. Photos ordered front exterior → kitchen → great room → primary → finishes → rear/lot. Floor-plan-only frames dropped on three listings (9 photos kept).</div>
-  </div>
   <aside class="notes">Click through carousels. Braestone and Horseshoe drive the peer set. 3316 Line 4 N at $1.45M is the top of the range.</aside>
 </section>
 
@@ -498,130 +509,130 @@
 </section>
 
 
-<section class="slide alt" id="s-models" data-title="Model options">
-  <div class="content" style="overflow:auto">
-    <div class="eyebrow r"><span class="num">07</span> Model options</div>
-    <h2 class="h r" style="--d:1">Stock plans Sabrina shortlisted for Scarlett</h2>
-    <hr class="rule r" style="--d:1">
-    <p class="lede r" style="--d:1.5;max-width:60ch">From Sabrina Staunton’s Oct 23, 2026 email “Thoughts on these?” — seven links on <b>canadianhomedesigns.com</b>. Main photo + floor plan embedded below (downloaded to this site).</p>
-    <div class="model-grid r" style="--d:2">
-      
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-halton/hero.jpg" alt="The Halton exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-halton/floor1.jpg" alt="The Halton floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The Halton</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Bungalow</span>
-            <span class="chip">2,036 sq ft</span>
-            <span class="chip">3 bed</span>
-            <span class="chip">2 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-halton/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-north-bay/hero.jpg" alt="The North Bay exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-north-bay/floor1.jpg" alt="The North Bay floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The North Bay</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Bungalow</span>
-            <span class="chip">2,093 sq ft</span>
-            <span class="chip">3 bed</span>
-            <span class="chip">2 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-north-bay/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-canada/hero.jpg" alt="The Canada exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-canada/floor1.jpg" alt="The Canada floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The Canada</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Bungalow</span>
-            <span class="chip">2,328 sq ft</span>
-            <span class="chip">3 bed</span>
-            <span class="chip">2.5 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-canada/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-superior/hero.jpg" alt="The Superior exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-superior/floor1.jpg" alt="The Superior floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The Superior</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Bungalow</span>
-            <span class="chip">2,596 sq ft</span>
-            <span class="chip">3 bed</span>
-            <span class="chip">2.5 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-superior/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-burlington/hero.jpg" alt="The Burlington exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-burlington/floor1.jpg" alt="The Burlington floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The Burlington</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Two-storey</span>
-            <span class="chip">2,002 sq ft</span>
-            <span class="chip">3 bed</span>
-            <span class="chip">2.5 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-burlington/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-richmond-hill/hero.jpg" alt="The Richmond Hill exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-richmond-hill/floor1.jpg" alt="The Richmond Hill floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The Richmond Hill</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Two-storey</span>
-            <span class="chip">2,490 sq ft</span>
-            <span class="chip">3 bed</span>
-            <span class="chip">2.5 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-richmond-hill/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
-      <article class="model-card r" style="--d:2">
-        <div class="model-media">
-          <img src="assets/models/the-hudson/hero.jpg" alt="The Hudson exterior / front elevation" loading="lazy">
-          <img src="assets/models/the-hudson/floor1.jpg" alt="The Hudson floor plan" loading="lazy" class="fp">
-        </div>
-        <div class="model-meta">
-          <h3>The Hudson</h3>
-          <div class="chips" style="margin:6px 0">
-            <span class="chip">Two-storey</span>
-            <span class="chip">2,519 sq ft</span>
-            <span class="chip">4 bed</span>
-            <span class="chip">2.5 bath</span>
-          </div>
-          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-hudson/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
-        </div>
-      </article>
+<section class="slide slide-grow alt" id="s-models" data-title="Model options">
+ <div class="content" style="overflow:auto">
+  <div class="eyebrow r"><span class="num">07</span> Model options</div>
+  <h2 class="h r" style="--d:1">Stock plans shortlisted for Scarlett</h2>
+  <hr class="rule r" style="--d:1">
+  <p class="lede r" style="--d:1.5;max-width:60ch">Seven stock plans from <b>canadianhomedesigns.com</b>. Main photo + floor plan embedded below (downloaded to this site). Tap a floor plan to enlarge.</p>
+  <div class="model-grid r" style="--d:2">
+   
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-halton/hero.jpg" alt="The Halton exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-halton/floor1.jpg" aria-label="Enlarge floor plan: The Halton floor plan"><img src="assets/models/the-halton/floor1.jpg" alt="The Halton floor plan" loading="lazy" class="fp"></button>
     </div>
-    <div class="cite-block r" style="--d:3">Source: Outlook email from Sabrina Staunton, Oct 23, 2026 · canadianhomedesigns.com stock plans. Specs (sq ft / beds / baths) from each plan page.</div>
+    <div class="model-meta">
+     <h3>The Halton</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Bungalow</span>
+      <span class="chip">2,036 sq ft</span>
+      <span class="chip">3 bed</span>
+      <span class="chip">2 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-halton/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-north-bay/hero.jpg" alt="The North Bay exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-north-bay/floor1.jpg" aria-label="Enlarge floor plan: The North Bay floor plan"><img src="assets/models/the-north-bay/floor1.jpg" alt="The North Bay floor plan" loading="lazy" class="fp"></button>
+    </div>
+    <div class="model-meta">
+     <h3>The North Bay</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Bungalow</span>
+      <span class="chip">2,093 sq ft</span>
+      <span class="chip">3 bed</span>
+      <span class="chip">2 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-north-bay/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-canada/hero.jpg" alt="The Canada exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-canada/floor1.jpg" aria-label="Enlarge floor plan: The Canada floor plan"><img src="assets/models/the-canada/floor1.jpg" alt="The Canada floor plan" loading="lazy" class="fp"></button>
+    </div>
+    <div class="model-meta">
+     <h3>The Canada</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Bungalow</span>
+      <span class="chip">2,328 sq ft</span>
+      <span class="chip">3 bed</span>
+      <span class="chip">2.5 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-canada/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-superior/hero.jpg" alt="The Superior exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-superior/floor1.jpg" aria-label="Enlarge floor plan: The Superior floor plan"><img src="assets/models/the-superior/floor1.jpg" alt="The Superior floor plan" loading="lazy" class="fp"></button>
+    </div>
+    <div class="model-meta">
+     <h3>The Superior</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Bungalow</span>
+      <span class="chip">2,596 sq ft</span>
+      <span class="chip">3 bed</span>
+      <span class="chip">2.5 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-superior/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-burlington/hero.jpg" alt="The Burlington exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-burlington/floor1.jpg" aria-label="Enlarge floor plan: The Burlington floor plan"><img src="assets/models/the-burlington/floor1.jpg" alt="The Burlington floor plan" loading="lazy" class="fp"></button>
+    </div>
+    <div class="model-meta">
+     <h3>The Burlington</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Two-storey</span>
+      <span class="chip">2,002 sq ft</span>
+      <span class="chip">3 bed</span>
+      <span class="chip">2.5 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-burlington/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-richmond-hill/hero.jpg" alt="The Richmond Hill exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-richmond-hill/floor1.jpg" aria-label="Enlarge floor plan: The Richmond Hill floor plan"><img src="assets/models/the-richmond-hill/floor1.jpg" alt="The Richmond Hill floor plan" loading="lazy" class="fp"></button>
+    </div>
+    <div class="model-meta">
+     <h3>The Richmond Hill</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Two-storey</span>
+      <span class="chip">2,490 sq ft</span>
+      <span class="chip">3 bed</span>
+      <span class="chip">2.5 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-richmond-hill/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
+   <article class="model-card r" style="--d:2">
+    <div class="model-media">
+     <img src="assets/models/the-hudson/hero.jpg" alt="The Hudson exterior / front elevation" loading="lazy">
+     <button type="button" class="fp-open" data-lightbox="assets/models/the-hudson/floor1.jpg" aria-label="Enlarge floor plan: The Hudson floor plan"><img src="assets/models/the-hudson/floor1.jpg" alt="The Hudson floor plan" loading="lazy" class="fp"></button>
+    </div>
+    <div class="model-meta">
+     <h3>The Hudson</h3>
+     <div class="chips" style="margin:6px 0">
+      <span class="chip">Two-storey</span>
+      <span class="chip">2,519 sq ft</span>
+      <span class="chip">4 bed</span>
+      <span class="chip">2.5 bath</span>
+     </div>
+     <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-hudson/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+    </div>
+   </article>
   </div>
-  <aside class="notes">Walk Tony through bungalows first (Halton / North Bay / Canada / Superior) as closest to a Scarlett Line frontage bungalow spec, then two-storeys if he wants more volume.</aside>
+  <div class="cite-block r" style="--d:3">Source: Outlook email from ds / baths) from each plan page.</div>
+ </div>
+ <aside class="notes">Walk Tony through bungalows first (Halton / North Bay / Canada / Superior) as closest to a Scarlett Line frontage bungalow spec, then two-storeys if he wants more volume.</aside>
 </section>
 
 <section class="slide dark" id="s-next" data-title="Ask">
@@ -660,6 +671,11 @@ window.SCARLET_MAP_SOLDS = [
 window.SCARLET_MAP_MG = [{"lat": 44.590715, "lng": -79.747146, "label": "Scarlett Estates \u00b7 Hillsdale (96 Scarlett Line)", "kind": "mg"}, {"lat": 44.590715, "lng": -79.747146, "label": "Lot 7 \u00b7 96 Scarlett Line (frontage) \u00b7 0.59 ac", "kind": "front"}, {"lat": 44.5915, "lng": -79.7485, "label": "Lot 4 \u00b7 18 Rumble Crt \u00b7 0.71 ac", "kind": "mg"}, {"lat": 44.5918, "lng": -79.7458, "label": "Lot 13 \u00b7 15 Greenlaw Crt \u00b7 0.69 ac", "kind": "mg"}, {"lat": 44.5912, "lng": -79.7455, "label": "Lot 14 \u00b7 12 Greenlaw Crt \u00b7 1.01 ac", "kind": "mg"}, {"lat": 44.7514602, "lng": -79.8009409, "label": "9 Swan Lane \u00b7 Unit 44 \u00b7 $199,900", "kind": "mg"}, {"lat": 44.75175, "lng": -79.80055, "label": "11 Swan Lane \u00b7 Unit 45 \u00b7 $199,900", "kind": "mg"}, {"lat": 44.6411302, "lng": -79.8291328, "label": "Waverley Heights \u00b7 Corsica Homes", "kind": "comp"}];
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="assets/js/main.js?v=1029n"></script>
+<div id="fp-lightbox" class="fp-lb" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Floor plan preview">
+  <button type="button" class="fp-lb-close" aria-label="Close">✕</button>
+  <img class="fp-lb-img" alt="Floor plan enlarged">
+  <a class="fp-lb-newtab" href="#" target="_blank" rel="noopener">Open full size</a>
+</div>
+<script src="assets/js/main.js?v=1029r"></script>
 </body>
 </html>

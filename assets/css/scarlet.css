@@ -87,13 +87,82 @@
   .stat-row,.pocket-sum{ grid-template-columns:1fr 1fr; }
 }
 
-#s-solds{ overflow:auto; }
-#s-solds .content{ overflow:auto; max-height:100%; padding-bottom: calc(var(--u)*3); }
-#s-solds .house-grid{ grid-template-columns: repeat(3, 1fr); gap: calc(var(--u)*1.2); }
+/* Tall comps slides: grow with content — never clip into the slide above */
+#s-solds,
+#s-waverley,
+#s-ppsf,
+#s-suggest,
+#s-models{
+  height: auto !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: visible !important;
+  align-items: stretch;
+}
+#s-solds .content,
+#s-waverley .content,
+#s-ppsf .content,
+#s-suggest .content,
+#s-models .content{
+  height: auto !important;
+  min-height: 0;
+  max-height: none !important;
+  overflow: visible !important;
+  justify-content: flex-start;
+  padding-top: calc(var(--pad-y) + 8px);
+  padding-bottom: calc(var(--pad-y) + var(--u)*4);
+}
+#s-solds .house-grid{
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--u)*1.2);
+  margin-top: calc(var(--u)*1);
+  flex: 0 0 auto;
+}
+#s-solds .house{ overflow: hidden; /* card chrome only — not the slide */ }
 #s-solds .house .car{ aspect-ratio:16/9; }
 #s-solds .house .addr{ font-size: calc(var(--u)*1.25); }
 #s-solds .house .price{ font-size: calc(var(--u)*1.2); }
+#s-solds .pocket-head{
+  grid-column: 1 / -1;
+  margin: calc(var(--u)*1.4) 0 calc(var(--u)*.4);
+  font-size: calc(var(--u)*1.15);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+}
+#s-solds .pocket-head:first-child{ margin-top: calc(var(--u)*.4); }
 @media (max-width:1100px){ #s-solds .house-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width:700px){ #s-solds .house-grid{ grid-template-columns: 1fr; } }
+
+/* Map slide stays viewport-tall but must not bleed */
+#s-map{
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+#s-map .content{
+  height: 100%;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+#s-map .map-wrap{
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+#map{
+  width: 100%;
+  height: min(56vh, 560px) !important;
+  min-height: 280px;
+  flex: 1 1 auto;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  z-index: 1;
+}
 
 .house .finish{ font-size: calc(var(--u)*.95); color:var(--muted); line-height:1.35; margin-top:4px; }
 .car{ position:relative; aspect-ratio:16/10; background:#e8e2d8; overflow:hidden; }
@@ -112,9 +181,6 @@
 .car .c-dot{ width:7px; height:7px; border-radius:50%; border:0; background:rgba(255,255,255,.45); padding:0; cursor:pointer; }
 .car .c-dot.on{ background:#ED5D22; }
 .car .c-count{ position:absolute; top:8px; right:8px; z-index:3; background:rgba(0,0,0,.5); color:#fff; font-size:11px; padding:2px 7px; border-radius:999px; }
-#s-solds .house-grid{ grid-template-columns: repeat(3, 1fr); }
-@media (max-width:1100px){ #s-solds .house-grid{ grid-template-columns: repeat(2, 1fr); } }
-
 /* Money figures that must not overflow the slide */
 .h .money, h2 .money, .price-fig-inline{
   font-size: clamp(0.95em, 2.5vw + 0.35rem, 1em);
