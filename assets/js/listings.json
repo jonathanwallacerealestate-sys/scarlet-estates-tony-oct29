@@ -56,10 +56,24 @@
     },
     {
       "name": "Swan Lane \u00b7 Port McNicoll",
-      "label": "MG \u00b7 Swan Lane",
+      "label": "MG \u00b7 Swan Lane \u00b7 $199,900 each",
       "lat": 44.7505,
       "lng": -79.785,
-      "kind": "mg"
+      "kind": "mg",
+      "units": [
+        {
+          "civic": "9 Swan Lane",
+          "unit": 44,
+          "list": 199900,
+          "acres": 0.41
+        },
+        {
+          "civic": "11 Swan Lane",
+          "unit": 45,
+          "list": 199900,
+          "acres": 0.42
+        }
+      ]
     },
     {
       "name": "Waverley Heights (Corsica)",
@@ -489,7 +503,7 @@
       "swan": {
         "lat": 44.7514602,
         "lng": -79.8009409,
-        "label": "Swan Lane \u00b7 Port McNicoll",
+        "label": "Swan Lane \u00b7 Units 44 & 45 \u00b7 $199,900 each",
         "source": "Nominatim: 9 Swan Lane, Port McNicoll"
       },
       "waverley": {

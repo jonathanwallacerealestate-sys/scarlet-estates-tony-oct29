@@ -14,8 +14,8 @@
     { c:'Scarlett Estates · Hillsdale', no:'Lot 7', addr:'96 Scarlett Line', ac:'0.59', img:'survey-lot7.jpg', fit:'cover', alt:'Survey extract with Lot 7 outlined', rows:[['Lot size','About 0.59 acre'],['Services','Town water, septic, natural gas, fibre optics'],['New build price range','$1.3M to $1.5M']] },
     { c:'Scarlett Estates · Hillsdale', no:'Lot 13', addr:'15 Greenlaw Crt', ac:'0.69', img:'survey-lot13.jpg', fit:'cover', alt:'Survey extract with Lot 13 outlined', rows:[['Lot size','About 0.69 acre'],['Services','Town water, septic, natural gas, fibre optics'],['New build price range','$1.3M to $1.5M']] },
     { c:'Scarlett Estates · Hillsdale', no:'Lot 14', addr:'12 Greenlaw Crt', ac:'1.01', img:'survey-lot14.jpg', fit:'cover', alt:'Survey extract with Lot 14 outlined', rows:[['Lot size','About 1.01 acres'],['Services','Town water, septic, natural gas, fibre optics'],['New build price range','$1.3M to $1.5M']] },
-    { c:'Swan Lane · Port McNicoll', no:'9 Swan Lane', addr:'Unit 44 · gated', ac:'0.41', img:'sketch-swan9.jpg', fit:'contain', alt:'Lot sketch, 9 Swan Lane, Unit 44', rows:[['Lot size','About 0.41 acre'],['Services','Town water and sewer'],['Connectivity','Rogers and Bell'],['Condo fees','$176.73/month']] },
-    { c:'Swan Lane · Port McNicoll', no:'11 Swan Lane', addr:'Unit 45 · gated', ac:'0.42', img:'sketch-swan11.jpg', fit:'contain', alt:'Lot sketch, 11 Swan Lane, Unit 45', rows:[['Lot size','About 0.42 acre'],['Services','Town water and sewer'],['Connectivity','Rogers and Bell'],['Condo fees','$176.73/month']] }
+    { c:'Swan Lane · Port McNicoll', no:'9 Swan Lane', addr:'Unit 44 · gated', ac:'0.41', price:'$199,900', img:'sketch-swan9.jpg', fit:'contain', alt:'Lot sketch, 9 Swan Lane, Unit 44', rows:[['List price','$199,900'],['Lot size','About 0.41 acre'],['Services','Town water and sewer'],['Connectivity','Rogers and Bell'],['Condo fees','$176.73/month']] },
+    { c:'Swan Lane · Port McNicoll', no:'11 Swan Lane', addr:'Unit 45 · gated', ac:'0.42', price:'$199,900', img:'sketch-swan11.jpg', fit:'contain', alt:'Lot sketch, 11 Swan Lane, Unit 45', rows:[['List price','$199,900'],['Lot size','About 0.42 acre'],['Services','Town water and sewer'],['Connectivity','Rogers and Bell'],['Condo fees','$176.73/month']] }
   ];
   var cards = document.getElementById('lotCards');
   if (cards){
@@ -24,7 +24,7 @@
       b.className = 'lot r'; b.style.setProperty('--d', 2 + i * 0.5); b.type = 'button';
       b.setAttribute('aria-label', 'Open lot sheet: ' + l.no + ', ' + l.addr);
       b.innerHTML = '<div class="thumb' + (l.fit === 'contain' ? ' contain' : '') + '"><img src="assets/img/' + l.img + '" alt=""></div>' +
-        '<div class="meta"><div class="comm">' + l.c.split(' · ')[0] + '</div><div class="no">' + l.no + '</div><div class="addr">' + l.addr + '</div><span class="ac">' + l.ac + ' acre' + (l.ac === '1.01' ? 's' : '') + '</span></div>';
+        '<div class="meta"><div class="comm">' + l.c.split(' · ')[0] + '</div><div class="no">' + l.no + '</div><div class="addr">' + l.addr + '</div>' + (l.price ? '<div class="price">' + l.price + '</div>' : '') + '<span class="ac">' + l.ac + ' acre' + (l.ac === '1.01' ? 's' : '') + '</span></div>';
       b.addEventListener('click', function(){ openLot(i); });
       cards.appendChild(b);
     });
