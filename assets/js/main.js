@@ -90,6 +90,35 @@
     return L.divIcon({ className: '', html: html, iconSize: [16,16], iconAnchor: [8,8] });
   }
 
+
+  // ---- Photo carousels ----
+  document.querySelectorAll('[data-carousel]').forEach(function(car){
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.c-slide'));
+    var dots = Array.prototype.slice.call(car.querySelectorAll('.c-dot'));
+    var curEl = car.querySelector('.c-cur');
+    var i = 0; var n = slides.length;
+    function show(x){
+      i = (x + n) % n;
+      slides.forEach(function(s, k){ s.classList.toggle('on', k === i); });
+      dots.forEach(function(d, k){ d.classList.toggle('on', k === i); });
+      if (curEl) curEl.textContent = String(i + 1);
+    }
+    var prev = car.querySelector('.c-prev');
+    var next = car.querySelector('.c-next');
+    if (prev) prev.addEventListener('click', function(e){ e.stopPropagation(); show(i - 1); });
+    if (next) next.addEventListener('click', function(e){ e.stopPropagation(); show(i + 1); });
+    dots.forEach(function(d){ d.addEventListener('click', function(e){ e.stopPropagation(); show(+d.getAttribute('data-i')); }); });
+    // swipe
+    var sx = null;
+    car.addEventListener('touchstart', function(e){ sx = e.changedTouches[0].screenX; }, {passive:true});
+    car.addEventListener('touchend', function(e){
+      if (sx == null) return;
+      var dx = e.changedTouches[0].screenX - sx; sx = null;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0) show(i + 1); else show(i - 1);
+    }, {passive:true});
+  });
+
   function ensureMap(){
     if (mapReady || typeof L === 'undefined') return;
     var el = document.getElementById('map');
@@ -110,17 +139,7 @@
       { lat:44.7505, lng:-79.7850, label:'Swan Lane · Port McNicoll', kind:'mg' },
       { lat:44.6350, lng:-79.7700, label:'Waverley Heights · Corsica Homes', kind:'comp' }
     ];
-    var solds = [
-      { lat:44.501, lng:-79.665, label:'18 Bridle Path · Sold $1,250,000' },
-      { lat:44.548, lng:-79.642, label:'2 Thoroughbred · Sold $1,200,000' },
-      { lat:44.535, lng:-79.680, label:'1 Topaz Crt · Sold $1,230,000' },
-      { lat:44.550, lng:-79.640, label:'14 Georgian Grande · Sold $1,200,000' },
-      { lat:44.448, lng:-79.755, label:'67 Doran Rd · Sold $1,250,000' },
-      { lat:44.549, lng:-79.638, label:'43 Thoroughbred · Sold $1,290,000' },
-      { lat:44.552, lng:-79.675, label:'17 Pine Ridge · Sold $1,300,000' },
-      { lat:44.547, lng:-79.639, label:'17 Clydesdale · Sold $1,350,000' },
-      { lat:44.555, lng:-79.690, label:'3316 Line 4 N · Sold (price pending)' }
-    ];
+    var solds = window.SCARLET_MAP_SOLDS || [];
     mg.forEach(function(p){
       var c = p.kind === 'front' ? '#1a1a1a' : (p.kind === 'comp' ? '#8b5a2b' : '#ED5D22');
       L.marker([p.lat,p.lng], { icon: pin(c, p.kind==='front') }).addTo(map).bindPopup(p.label);

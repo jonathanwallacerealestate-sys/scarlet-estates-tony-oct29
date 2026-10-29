@@ -3,7 +3,7 @@
     "email": "Listing(s) for your review",
     "from": "notifications@em.realmmlp.ca",
     "received_et": "2026-10-29 10:59 America/Toronto",
-    "note": "REALM client share. Sold prices from public portals cited per listing; email cards showed Sold + DOM but not sold price. Portal gallery returned HTTP 500 from the box."
+    "note": "REALM is source of record for sold price, list, sq ft and DOM. Photos ordered from REALM gallery downloads."
   },
   "proposal": {
     "site": "Scarlett Estates, Hillsdale (Springwater)",
@@ -142,21 +142,32 @@
     {
       "id": "18-bridle",
       "address": "18 Bridle Path",
-      "area": "Oro-Medonte \u00b7 Shanty Bay",
-      "pocket": "Oro-Medonte",
+      "area": "Oro-Medonte \u00b7 Horseshoe Valley",
+      "pocket": "Horseshoe Valley",
       "beds": "3+1",
       "baths": "3",
       "sqft": "2000-2500",
-      "style": "Detached bungalow",
+      "style": "Detached Bungalow Sold",
       "dom": 1,
       "mls": "S13632620",
       "list": 1249900,
       "sold": 1250000,
-      "sold_source": "property.ca / RealEstateBay.ca",
-      "photo": "assets/photos/18-bridle/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/18-bridle/01.jpg",
+        "assets/photos/18-bridle/02.jpg",
+        "assets/photos/18-bridle/03.jpg",
+        "assets/photos/18-bridle/04.jpg",
+        "assets/photos/18-bridle/05.jpg",
+        "assets/photos/18-bridle/06.jpg",
+        "assets/photos/18-bridle/07.jpg",
+        "assets/photos/18-bridle/08.jpg",
+        "assets/photos/18-bridle/09.jpg",
+        "assets/photos/18-bridle/10.jpg"
+      ],
+      "finish": "Vaulted great room with ledger-stone fireplace and built-ins; two-tone kitchen with stone island and glass-front cabinets; spa ensuite with freestanding tub and glass shower; interlocking rear patio with cedar privacy.",
       "lat": 44.501,
-      "lng": -79.665,
-      "features": "Central vac, family room, fireplace"
+      "lng": -79.665
     },
     {
       "id": "2-thoroughbred",
@@ -166,16 +177,26 @@
       "beds": "3+1",
       "baths": "3",
       "sqft": "2000-2500",
-      "style": "Detached bungalow \u00b7 acreage",
+      "style": "Detached Bungalow Sold",
       "dom": 69,
       "mls": "S13659548",
       "list": 1275000,
       "sold": 1200000,
-      "sold_source": "strata.ca",
-      "photo": "assets/photos/2-thoroughbred/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/2-thoroughbred/01.jpg",
+        "assets/photos/2-thoroughbred/02.jpg",
+        "assets/photos/2-thoroughbred/03.jpg",
+        "assets/photos/2-thoroughbred/04.jpg",
+        "assets/photos/2-thoroughbred/05.jpg",
+        "assets/photos/2-thoroughbred/06.jpg",
+        "assets/photos/2-thoroughbred/07.jpg",
+        "assets/photos/2-thoroughbred/08.jpg",
+        "assets/photos/2-thoroughbred/09.jpg"
+      ],
+      "finish": "Modern farmhouse with board-and-batten and stone; tray-ceiling great room with chevron wood fireplace wall; quartz island kitchen with pro range; primary with limewash walls and barn door; glass shower with patterned wallpaper.",
       "lat": 44.548,
-      "lng": -79.642,
-      "features": "Fireplace, golf, greenbelt"
+      "lng": -79.642
     },
     {
       "id": "1-topaz",
@@ -185,16 +206,27 @@
       "beds": "3",
       "baths": "3",
       "sqft": "1500-2000",
-      "style": "Detached bungalow \u00b7 acreage",
+      "style": "Detached Bungalow Sold",
       "dom": 95,
       "mls": "S13538672",
       "list": 1290000,
       "sold": 1230000,
-      "sold_source": "gta-homes.com",
-      "photo": "assets/photos/1-topaz/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/1-topaz/01.jpg",
+        "assets/photos/1-topaz/02.jpg",
+        "assets/photos/1-topaz/03.jpg",
+        "assets/photos/1-topaz/04.jpg",
+        "assets/photos/1-topaz/05.jpg",
+        "assets/photos/1-topaz/06.jpg",
+        "assets/photos/1-topaz/07.jpg",
+        "assets/photos/1-topaz/08.jpg",
+        "assets/photos/1-topaz/09.jpg",
+        "assets/photos/1-topaz/10.jpg"
+      ],
+      "finish": "Stone-and-brick bungalow on a wooded Sugarbush lot; espresso cabinetry and granite island kitchen; formal dining with tray ceiling; marble-look ensuite with corner soaker and glass shower; multi-level deck and fire-pit patio.",
       "lat": 44.535,
-      "lng": -79.68,
-      "features": "Central vac, fireplace, wooded"
+      "lng": -79.68
     },
     {
       "id": "14-georgian",
@@ -204,16 +236,27 @@
       "beds": "3",
       "baths": "3",
       "sqft": "2000-2500",
-      "style": "Detached bungaloft \u00b7 acreage",
+      "style": "Detached Bungaloft Sold",
       "dom": 19,
       "mls": "S13040266",
       "list": 1295000,
       "sold": 1200000,
-      "sold_source": "gta-homes.com / property.ca",
-      "photo": "assets/photos/14-georgian/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/14-georgian/01.jpg",
+        "assets/photos/14-georgian/02.jpg",
+        "assets/photos/14-georgian/03.jpg",
+        "assets/photos/14-georgian/04.jpg",
+        "assets/photos/14-georgian/05.jpg",
+        "assets/photos/14-georgian/06.jpg",
+        "assets/photos/14-georgian/07.jpg",
+        "assets/photos/14-georgian/08.jpg",
+        "assets/photos/14-georgian/09.jpg",
+        "assets/photos/14-georgian/10.jpg"
+      ],
+      "finish": "Braestone bungaloft with porch and stone accents; open kitchen with mixed cabinetry and pro gas range; vaulted great room with fireplace; bright primary with chandelier; laundry/mud finishes; stone patio overlooking Braestone farm views.",
       "lat": 44.55,
-      "lng": -79.64,
-      "features": "Family room, fireplace, golf"
+      "lng": -79.64
     },
     {
       "id": "67-doran",
@@ -223,16 +266,27 @@
       "beds": "4",
       "baths": "3",
       "sqft": "2500-3000",
-      "style": "Detached 2-storey \u00b7 acreage",
+      "style": "Detached 2-Storey Sold",
       "dom": 25,
       "mls": "S13646228",
       "list": 1299000,
       "sold": 1250000,
-      "sold_source": "property.ca / RealEstateBay.ca",
-      "photo": "assets/photos/67-doran/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/67-doran/01.jpg",
+        "assets/photos/67-doran/02.jpg",
+        "assets/photos/67-doran/03.jpg",
+        "assets/photos/67-doran/04.jpg",
+        "assets/photos/67-doran/05.jpg",
+        "assets/photos/67-doran/06.jpg",
+        "assets/photos/67-doran/07.jpg",
+        "assets/photos/67-doran/08.jpg",
+        "assets/photos/67-doran/09.jpg",
+        "assets/photos/67-doran/10.jpg"
+      ],
+      "finish": "Modern farmhouse with stone and timber porch; white kitchen with butcher-block tops and herringbone tile; floor-to-ceiling stone fireplace; light-wood primary; covered porch swing; wooded lot with fire pit, pergola and pool.",
       "lat": 44.448,
-      "lng": -79.755,
-      "features": "Central vac, family room, fireplace"
+      "lng": -79.755
     },
     {
       "id": "43-thoroughbred",
@@ -242,16 +296,27 @@
       "beds": "2",
       "baths": "2",
       "sqft": "1500-2000",
-      "style": "Detached bungalow \u00b7 ~1 ac",
+      "style": "Detached Bungalow Sold",
       "dom": 92,
       "mls": "S12744958",
       "list": 1335000,
       "sold": 1290000,
-      "sold_source": "gta-homes.com",
-      "photo": "assets/photos/43-thoroughbred/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/43-thoroughbred/01.jpg",
+        "assets/photos/43-thoroughbred/02.jpg",
+        "assets/photos/43-thoroughbred/03.jpg",
+        "assets/photos/43-thoroughbred/04.jpg",
+        "assets/photos/43-thoroughbred/05.jpg",
+        "assets/photos/43-thoroughbred/06.jpg",
+        "assets/photos/43-thoroughbred/07.jpg",
+        "assets/photos/43-thoroughbred/08.jpg",
+        "assets/photos/43-thoroughbred/09.jpg",
+        "assets/photos/43-thoroughbred/10.jpg"
+      ],
+      "finish": "Charcoal bungalow with stone skirt and triple garage; white kitchen with dark island and pro range; vaulted great room with built-ins and fireplace; spa ensuite with glass shower and soaker; wooded Braestone trails.",
       "lat": 44.549,
-      "lng": -79.638,
-      "features": "Vaulted great room, chef kitchen"
+      "lng": -79.638
     },
     {
       "id": "17-pine-ridge",
@@ -261,16 +326,26 @@
       "beds": "4",
       "baths": "4",
       "sqft": "3500-5000",
-      "style": "Detached 2-storey",
+      "style": "Detached 2-Storey Sold",
       "dom": 131,
       "mls": "S12922430",
       "list": 1398000,
       "sold": 1300000,
-      "sold_source": "gta-homes.com",
-      "photo": "assets/photos/17-pine-ridge/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/17-pine-ridge/01.jpg",
+        "assets/photos/17-pine-ridge/02.jpg",
+        "assets/photos/17-pine-ridge/03.jpg",
+        "assets/photos/17-pine-ridge/04.jpg",
+        "assets/photos/17-pine-ridge/05.jpg",
+        "assets/photos/17-pine-ridge/06.jpg",
+        "assets/photos/17-pine-ridge/07.jpg",
+        "assets/photos/17-pine-ridge/08.jpg",
+        "assets/photos/17-pine-ridge/09.jpg"
+      ],
+      "finish": "Timber-frame craftsman with stone and charcoal siding; navy island gourmet kitchen with custom hood; coffered-ceiling great room with stone fireplace; tray foyer finishes; timber screened porch with outdoor fireplace; forested rear lot.",
       "lat": 44.552,
-      "lng": -79.675,
-      "features": "Chef kitchen, timber porch"
+      "lng": -79.675
     },
     {
       "id": "17-clydesdale",
@@ -280,17 +355,27 @@
       "beds": "3+1",
       "baths": "4",
       "sqft": "2000-2500",
-      "style": "Detached bungalow-raised \u00b7 ~1 ac",
+      "style": "Detached Bungalow-Raised Sold",
       "dom": 66,
       "mls": "S12708264",
       "list": 1429000,
       "sold": 1350000,
-      "sold_source": "gta-homes.com",
-      "photo": "assets/photos/17-clydesdale/01.jpg",
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/17-clydesdale/01.jpg",
+        "assets/photos/17-clydesdale/02.jpg",
+        "assets/photos/17-clydesdale/03.jpg",
+        "assets/photos/17-clydesdale/04.jpg",
+        "assets/photos/17-clydesdale/05.jpg",
+        "assets/photos/17-clydesdale/06.jpg",
+        "assets/photos/17-clydesdale/07.jpg",
+        "assets/photos/17-clydesdale/08.jpg",
+        "assets/photos/17-clydesdale/09.jpg",
+        "assets/photos/17-clydesdale/10.jpg"
+      ],
+      "finish": "White modern farmhouse with black trim and stone skirt; navy island with waterfall quartz; vaulted open great room; bright primary; covered rear patio; aerial estate setting against forest.",
       "lat": 44.547,
-      "lng": -79.639,
-      "features": "New build, 3-car garage",
-      "note": "Listed by Faris Team"
+      "lng": -79.639
     },
     {
       "id": "3316-line4",
@@ -300,33 +385,43 @@
       "beds": "4",
       "baths": "4",
       "sqft": "3500-5000",
-      "style": "Detached 3-storey",
+      "style": "Detached 3-Storey Sold",
       "dom": 22,
       "mls": "S13084040",
-      "list": null,
-      "sold": null,
-      "sold_source": "Sold on REALM share; public sold price not confirmed",
-      "photo": null,
+      "list": 1487000,
+      "sold": 1450000,
+      "sold_source": "REALM MLS share (facts.txt)",
+      "photos": [
+        "assets/photos/3316-line4/01.jpg",
+        "assets/photos/3316-line4/02.jpg",
+        "assets/photos/3316-line4/03.jpg",
+        "assets/photos/3316-line4/04.jpg",
+        "assets/photos/3316-line4/05.jpg",
+        "assets/photos/3316-line4/06.jpg",
+        "assets/photos/3316-line4/07.jpg",
+        "assets/photos/3316-line4/08.jpg",
+        "assets/photos/3316-line4/09.jpg"
+      ],
+      "finish": "Contemporary multi-storey in the trees; waterfall-island kitchen with dark wood cabinets; two-storey great room with stone fireplace and window wall; primary ensuite with freestanding tub; wooded balconies and private canopy lot.",
       "lat": 44.555,
-      "lng": -79.69,
-      "features": "Family room, fireplace, golf"
+      "lng": -79.69
     }
   ],
   "stats": {
-    "sold_count_with_price": 8,
-    "sold_count_status_only": 1,
-    "avg_sold": 1258750,
+    "sold_count_with_price": 9,
+    "sold_count_status_only": 0,
+    "avg_sold": 1280000,
     "median_sold": 1250000,
-    "avg_dom": 62.2,
+    "avg_dom": 57.8,
     "min_sold": 1200000,
-    "max_sold": 1350000
+    "max_sold": 1450000
   },
   "pockets": {
-    "Oro-Medonte": {
-      "count": 1,
-      "avg_sold": 1250000,
-      "median_sold": 1250000,
-      "avg_dom": 1.0
+    "Horseshoe Valley": {
+      "count": 3,
+      "avg_sold": 1333333,
+      "median_sold": 1300000,
+      "avg_dom": 51.3
     },
     "Braestone / Thoroughbred": {
       "count": 4,
@@ -345,12 +440,6 @@
       "avg_sold": 1250000,
       "median_sold": 1250000,
       "avg_dom": 25.0
-    },
-    "Horseshoe Valley": {
-      "count": 1,
-      "avg_sold": 1300000,
-      "median_sold": 1300000,
-      "avg_dom": 131.0
     }
   }
 }
