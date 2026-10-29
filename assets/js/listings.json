@@ -92,7 +92,10 @@
         "sources": [
           "realtor.ca",
           "squareyards.ca"
-        ]
+        ],
+        "acres": 0.81,
+        "lot_dims": "168.8 \u00d7 209.1 ft",
+        "acres_source": "REALTOR.ca / property.ca MLS S13834106 (35,302 sq ft \u00f7 43,560)"
       },
       {
         "address": "51 Waverley Heights, Tay",
@@ -108,7 +111,10 @@
         "sources": [
           "REALM share",
           "rew.ca"
-        ]
+        ],
+        "acres": 0.69,
+        "lot_dims": "131.23 \u00d7 229.49 ft",
+        "acres_source": "property.ca / Zolo MLS S13833802 (30,115 sq ft \u00f7 43,560)"
       },
       {
         "address": "47 Waverley Heights, Tay",
@@ -121,7 +127,10 @@
         "dom": 8,
         "sources": [
           "REALM share"
-        ]
+        ],
+        "acres": 0.69,
+        "lot_dims": "131.2 \u00d7 229.4 ft",
+        "acres_source": "REALTOR.ca / gta-homes MLS S14101094"
       },
       {
         "address": "88 Waverley Heights, Tay",
@@ -134,7 +143,10 @@
         "dom": 77,
         "sources": [
           "REALM share"
-        ]
+        ],
+        "acres": 0.81,
+        "lot_dims": "168.84 \u00d7 208.5 ft",
+        "acres_source": "Sothebys / property.ca MLS S13672732 (35,203 sq ft \u00f7 43,560)"
       }
     ]
   },
@@ -166,8 +178,8 @@
         "assets/photos/18-bridle/10.jpg"
       ],
       "finish": "Vaulted great room with ledger-stone fireplace and built-ins; two-tone kitchen with stone island and glass-front cabinets; spa ensuite with freestanding tub and glass shower; interlocking rear patio with cedar privacy.",
-      "lat": 44.501,
-      "lng": -79.665
+      "lat": 44.5451074,
+      "lng": -79.6551223
     },
     {
       "id": "2-thoroughbred",
@@ -195,8 +207,8 @@
         "assets/photos/2-thoroughbred/09.jpg"
       ],
       "finish": "Modern farmhouse with board-and-batten and stone; tray-ceiling great room with chevron wood fireplace wall; quartz island kitchen with pro range; primary with limewash walls and barn door; glass shower with patterned wallpaper.",
-      "lat": 44.548,
-      "lng": -79.642
+      "lat": 44.5810289,
+      "lng": -79.5824946
     },
     {
       "id": "1-topaz",
@@ -225,8 +237,8 @@
         "assets/photos/1-topaz/10.jpg"
       ],
       "finish": "Stone-and-brick bungalow on a wooded Sugarbush lot; espresso cabinetry and granite island kitchen; formal dining with tray ceiling; marble-look ensuite with corner soaker and glass shower; multi-level deck and fire-pit patio.",
-      "lat": 44.535,
-      "lng": -79.68
+      "lat": 44.55922,
+      "lng": -79.613475
     },
     {
       "id": "14-georgian",
@@ -255,8 +267,8 @@
         "assets/photos/14-georgian/10.jpg"
       ],
       "finish": "Braestone bungaloft with porch and stone accents; open kitchen with mixed cabinetry and pro gas range; vaulted great room with fireplace; bright primary with chandelier; laundry/mud finishes; stone patio overlooking Braestone farm views.",
-      "lat": 44.55,
-      "lng": -79.64
+      "lat": 44.5822975,
+      "lng": -79.580852
     },
     {
       "id": "67-doran",
@@ -285,8 +297,8 @@
         "assets/photos/67-doran/10.jpg"
       ],
       "finish": "Modern farmhouse with stone and timber porch; white kitchen with butcher-block tops and herringbone tile; floor-to-ceiling stone fireplace; light-wood primary; covered porch swing; wooded lot with fire pit, pergola and pool.",
-      "lat": 44.448,
-      "lng": -79.755
+      "lat": 44.4499861,
+      "lng": -79.7320917
     },
     {
       "id": "43-thoroughbred",
@@ -315,8 +327,8 @@
         "assets/photos/43-thoroughbred/10.jpg"
       ],
       "finish": "Charcoal bungalow with stone skirt and triple garage; white kitchen with dark island and pro range; vaulted great room with built-ins and fireplace; spa ensuite with glass shower and soaker; wooded Braestone trails.",
-      "lat": 44.549,
-      "lng": -79.638
+      "lat": 44.5722143,
+      "lng": -79.5761499
     },
     {
       "id": "17-pine-ridge",
@@ -344,8 +356,8 @@
         "assets/photos/17-pine-ridge/09.jpg"
       ],
       "finish": "Timber-frame craftsman with stone and charcoal siding; navy island gourmet kitchen with custom hood; coffered-ceiling great room with stone fireplace; tray foyer finishes; timber screened porch with outdoor fireplace; forested rear lot.",
-      "lat": 44.552,
-      "lng": -79.675
+      "lat": 44.5571721,
+      "lng": -79.6672758
     },
     {
       "id": "17-clydesdale",
@@ -374,8 +386,8 @@
         "assets/photos/17-clydesdale/10.jpg"
       ],
       "finish": "White modern farmhouse with black trim and stone skirt; navy island with waterfall quartz; vaulted open great room; bright primary; covered rear patio; aerial estate setting against forest.",
-      "lat": 44.547,
-      "lng": -79.639
+      "lat": 44.5754106,
+      "lng": -79.5818014
     },
     {
       "id": "3316-line4",
@@ -403,8 +415,8 @@
         "assets/photos/3316-line4/09.jpg"
       ],
       "finish": "Contemporary multi-storey in the trees; waterfall-island kitchen with dark wood cabinets; two-storey great room with stone fireplace and window wall; primary ensuite with freestanding tub; wooded balconies and private canopy lot.",
-      "lat": 44.555,
-      "lng": -79.69
+      "lat": 44.552723,
+      "lng": -79.6574201
     }
   ],
   "stats": {
@@ -441,5 +453,126 @@
       "median_sold": 1250000,
       "avg_dom": 25.0
     }
+  },
+  "geocode": {
+    "scarlett": {
+      "scarlett_estates": {
+        "lat": 44.590715,
+        "lng": -79.747146,
+        "label": "Scarlett Estates \u00b7 Hillsdale",
+        "source": "ArcGIS World Geocoder: 96 Scarlett Line, Hillsdale, ON L0L 1V0 (score 100)"
+      },
+      "lot7_frontage": {
+        "lat": 44.590715,
+        "lng": -79.747146,
+        "label": "Lot 7 \u00b7 96 Scarlett Line (frontage)",
+        "source": "ArcGIS: 96 Scarlett Line, Hillsdale, ON L0L 1V0 (score 100). Spelling confirmed Scarlett (double-t)."
+      },
+      "lot4": {
+        "lat": 44.5915,
+        "lng": -79.7485,
+        "label": "Lot 4 \u00b7 18 Rumble Crt",
+        "source": "Offset north of 96 Scarlett Line along Rumble Court (new street not in geocoders; relative to site plan)"
+      },
+      "lot13": {
+        "lat": 44.5918,
+        "lng": -79.7458,
+        "label": "Lot 13 \u00b7 15 Greenlaw Crt",
+        "source": "Offset NE of Scarlett Line frontage (Greenlaw Court not in geocoders yet)"
+      },
+      "lot14": {
+        "lat": 44.5912,
+        "lng": -79.7455,
+        "label": "Lot 14 \u00b7 12 Greenlaw Crt",
+        "source": "Offset E of Scarlett Line frontage (Greenlaw Court not in geocoders yet)"
+      },
+      "swan": {
+        "lat": 44.7514602,
+        "lng": -79.8009409,
+        "label": "Swan Lane \u00b7 Port McNicoll",
+        "source": "Nominatim: 9 Swan Lane, Port McNicoll"
+      },
+      "waverley": {
+        "lat": 44.6411302,
+        "lng": -79.8291328,
+        "label": "Waverley Heights \u00b7 Corsica",
+        "source": "Nominatim: Waverley Heights, Tay"
+      }
+    },
+    "comps": {
+      "18-bridle": {
+        "lat": 44.5451074,
+        "lng": -79.6551223
+      },
+      "2-thoroughbred": {
+        "lat": 44.5810289,
+        "lng": -79.5824946
+      },
+      "1-topaz": {
+        "lat": 44.55922,
+        "lng": -79.613475
+      },
+      "14-georgian": {
+        "lat": 44.5822975,
+        "lng": -79.580852
+      },
+      "67-doran": {
+        "lat": 44.4499861,
+        "lng": -79.7320917
+      },
+      "43-thoroughbred": {
+        "lat": 44.5722143,
+        "lng": -79.5761499
+      },
+      "17-pine-ridge": {
+        "lat": 44.5571721,
+        "lng": -79.6672758
+      },
+      "17-clydesdale": {
+        "lat": 44.5754106,
+        "lng": -79.5818014
+      },
+      "3316-line4": {
+        "lat": 44.552723,
+        "lng": -79.6574201
+      }
+    }
+  },
+  "waverley_acres": {
+    "92": {
+      "front": 168.8,
+      "depth": 209.1,
+      "acres": 0.81,
+      "dims": "168.8 \u00d7 209.1 ft",
+      "source": "REALTOR.ca / property.ca MLS S13834106 (35,302 sq ft \u00f7 43,560)"
+    },
+    "51": {
+      "front": 131.23,
+      "depth": 229.49,
+      "acres": 0.69,
+      "dims": "131.23 \u00d7 229.49 ft",
+      "source": "property.ca / Zolo MLS S13833802 (30,115 sq ft \u00f7 43,560)"
+    },
+    "47": {
+      "front": 131.2,
+      "depth": 229.4,
+      "acres": 0.69,
+      "dims": "131.2 \u00d7 229.4 ft",
+      "source": "REALTOR.ca / gta-homes MLS S14101094"
+    },
+    "88": {
+      "front": 168.84,
+      "depth": 208.5,
+      "acres": 0.81,
+      "dims": "168.84 \u00d7 208.5 ft",
+      "source": "Sothebys / property.ca MLS S13672732 (35,203 sq ft \u00f7 43,560)"
+    }
+  },
+  "scarlett_acres": {
+    "4": 0.71,
+    "7": 0.59,
+    "13": 0.69,
+    "14": 1.01,
+    "source": "Tony Marcelli Sep 16, 2026 email 'Scarlett & Swan Property Sizes & Info'"
   }
 }
