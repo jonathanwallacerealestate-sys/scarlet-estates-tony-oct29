@@ -49,7 +49,7 @@
   }
   var ticking = false;
   window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ setActive(nearest()); ticking = false; }); } }, { passive: true });
-  window.addEventListener('resize', function(){ setActive(nearest()); if (mapReady && window._scarletMap) window._scarletMap.invalidateSize(); });
+  window.addEventListener('resize', function(){ setActive(nearest()); if (mapReady && window._scarletMap){ window._scarletMap.invalidateSize(); if (window._scarletMapPoints && window._scarletMapPoints.length){ window._scarletMap.fitBounds(L.latLngBounds(window._scarletMapPoints), { padding: [48, 48], maxZoom: 12, animate: false }); } } });
   setActive(nearest());
 
   function go(i){
