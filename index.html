@@ -10,6 +10,20 @@
 <link rel="stylesheet" href="assets/css/scarlet.css?v=1029b">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script>document.documentElement.className += ' js';</script>
+
+<style id="model-grid-css">
+.model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:calc(var(--u)*.9);margin-top:calc(var(--u)*.8)}
+.model-card{border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.model-media{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);min-height:140px}
+.model-media img{width:100%;height:140px;object-fit:cover;background:#f4f1ec}
+.model-media img.fp{object-fit:contain;background:#fff}
+.model-meta{padding:10px 12px 12px}
+.model-meta h3{margin:0 0 4px;font-size:calc(var(--u)*1.15)}
+.model-meta .src{font-size:.82em;color:var(--orange);text-decoration:none}
+.model-meta .src:hover{text-decoration:underline}
+@media (max-width:700px){.model-media{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -478,7 +492,134 @@
       Overall median $1,250,000 and average $1,280,000 across nine REALM solds. A Scarlett Line frontage ask of $1,089,900 sits below every Waverley Fairweather-band list and below the sold median.
     </p>
   </div>
-  <aside class="notes">If Tony pushes back on $1.05M, walk the Braestone median and Waverley Fairweather again.</aside>
+  <aside class="notes">If Tony pushes back on $1,089,900, walk the Braestone median and Waverley Fairweather again.</aside>
+</section>
+
+
+<section class="slide alt" id="s-models" data-title="Model options">
+  <div class="content" style="overflow:auto">
+    <div class="eyebrow r"><span class="num">07</span> Model options</div>
+    <h2 class="h r" style="--d:1">Stock plans Sabrina shortlisted for Scarlett</h2>
+    <hr class="rule r" style="--d:1">
+    <p class="lede r" style="--d:1.5;max-width:60ch">From Sabrina Staunton’s Oct 23, 2026 email “Thoughts on these?” — seven links on <b>canadianhomedesigns.com</b>. Main photo + floor plan embedded below (downloaded to this site).</p>
+    <div class="model-grid r" style="--d:2">
+      
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-halton/hero.jpg" alt="The Halton exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-halton/floor1.jpg" alt="The Halton floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The Halton</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Bungalow</span>
+            <span class="chip">2,036 sq ft</span>
+            <span class="chip">3 bed</span>
+            <span class="chip">2 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-halton/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-north-bay/hero.jpg" alt="The North Bay exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-north-bay/floor1.jpg" alt="The North Bay floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The North Bay</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Bungalow</span>
+            <span class="chip">2,093 sq ft</span>
+            <span class="chip">3 bed</span>
+            <span class="chip">2 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-north-bay/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-canada/hero.jpg" alt="The Canada exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-canada/floor1.jpg" alt="The Canada floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The Canada</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Bungalow</span>
+            <span class="chip">2,328 sq ft</span>
+            <span class="chip">3 bed</span>
+            <span class="chip">2.5 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-canada/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-superior/hero.jpg" alt="The Superior exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-superior/floor1.jpg" alt="The Superior floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The Superior</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Bungalow</span>
+            <span class="chip">2,596 sq ft</span>
+            <span class="chip">3 bed</span>
+            <span class="chip">2.5 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/bungalow-house-plans/the-superior/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-burlington/hero.jpg" alt="The Burlington exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-burlington/floor1.jpg" alt="The Burlington floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The Burlington</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Two-storey</span>
+            <span class="chip">2,002 sq ft</span>
+            <span class="chip">3 bed</span>
+            <span class="chip">2.5 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-burlington/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-richmond-hill/hero.jpg" alt="The Richmond Hill exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-richmond-hill/floor1.jpg" alt="The Richmond Hill floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The Richmond Hill</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Two-storey</span>
+            <span class="chip">2,490 sq ft</span>
+            <span class="chip">3 bed</span>
+            <span class="chip">2.5 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-richmond-hill/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+      <article class="model-card r" style="--d:2">
+        <div class="model-media">
+          <img src="assets/models/the-hudson/hero.jpg" alt="The Hudson exterior / front elevation" loading="lazy">
+          <img src="assets/models/the-hudson/floor1.jpg" alt="The Hudson floor plan" loading="lazy" class="fp">
+        </div>
+        <div class="model-meta">
+          <h3>The Hudson</h3>
+          <div class="chips" style="margin:6px 0">
+            <span class="chip">Two-storey</span>
+            <span class="chip">2,519 sq ft</span>
+            <span class="chip">4 bed</span>
+            <span class="chip">2.5 bath</span>
+          </div>
+          <a class="src" href="https://canadianhomedesigns.com/stock-house-plans/two-storeys/the-hudson/" target="_blank" rel="noopener">canadianhomedesigns.com · source</a>
+        </div>
+      </article>
+    </div>
+    <div class="cite-block r" style="--d:3">Source: Outlook email from Sabrina Staunton, Oct 23, 2026 · canadianhomedesigns.com stock plans. Specs (sq ft / beds / baths) from each plan page.</div>
+  </div>
+  <aside class="notes">Walk Tony through bungalows first (Halton / North Bay / Canada / Superior) as closest to a Scarlett Line frontage bungalow spec, then two-storeys if he wants more volume.</aside>
 </section>
 
 <section class="slide dark" id="s-next" data-title="Ask">
@@ -517,6 +658,6 @@ window.SCARLET_MAP_SOLDS = [
 window.SCARLET_MAP_MG = [{"lat": 44.590715, "lng": -79.747146, "label": "Scarlett Estates \u00b7 Hillsdale (96 Scarlett Line)", "kind": "mg"}, {"lat": 44.590715, "lng": -79.747146, "label": "Lot 7 \u00b7 96 Scarlett Line (frontage) \u00b7 0.59 ac", "kind": "front"}, {"lat": 44.5915, "lng": -79.7485, "label": "Lot 4 \u00b7 18 Rumble Crt \u00b7 0.71 ac", "kind": "mg"}, {"lat": 44.5918, "lng": -79.7458, "label": "Lot 13 \u00b7 15 Greenlaw Crt \u00b7 0.69 ac", "kind": "mg"}, {"lat": 44.5912, "lng": -79.7455, "label": "Lot 14 \u00b7 12 Greenlaw Crt \u00b7 1.01 ac", "kind": "mg"}, {"lat": 44.7514602, "lng": -79.8009409, "label": "Swan Lane \u00b7 Port McNicoll", "kind": "mg"}, {"lat": 44.6411302, "lng": -79.8291328, "label": "Waverley Heights \u00b7 Corsica Homes", "kind": "comp"}];
 </script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="assets/js/main.js?v=1029e"></script>
+<script src="assets/js/main.js?v=1029f"></script>
 </body>
 </html>
