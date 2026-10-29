@@ -204,3 +204,87 @@
 .chip b{ white-space: nowrap; }
 .house .price, .house .ppsf{ overflow-wrap: anywhere; max-width:100%; }
 
+
+/* Cover Lot 7 callout — must not overflow */
+.cover .title{
+  overflow: visible;
+  min-height: 0;
+  gap: calc(var(--u)*.6);
+  justify-content: flex-start;
+  padding-top: calc(var(--u)*1.6);
+  padding-bottom: calc(var(--u)*1.6);
+}
+.cover h1{
+  white-space: normal;
+  font-size: clamp(1.35rem, 2.2vw + 0.6rem, calc(var(--u)*4.2));
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+.cover .sub{
+  font-size: clamp(0.95rem, 1.1vw + 0.4rem, calc(var(--u)*1.9));
+  line-height: 1.3;
+}
+.lot7-callout{
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: calc(var(--u)*.9);
+  padding: 10px 12px;
+  background: #fff;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  max-width: 100%;
+  min-width: 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.lot7-thumb{
+  width: clamp(88px, 14vw, 140px);
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+}
+.lot7-text{
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.lot7-kicker{
+  font-size: clamp(0.7rem, 0.6vw + 0.45rem, 0.85rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--orange);
+}
+.lot7-line{
+  font-size: clamp(0.85rem, 0.7vw + 0.55rem, 1.05rem);
+  color: var(--char);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+.lot7-line .money{
+  white-space: nowrap;
+  font-weight: 700;
+  color: var(--orange);
+}
+.cover .date{ margin-top: calc(var(--u)*.8); }
+.cover .by, .cover .hint{
+  font-size: clamp(0.75rem, 0.55vw + 0.5rem, calc(var(--u)*1.05));
+  overflow-wrap: anywhere;
+}
+@media (max-width:900px){
+  .cover .right{ grid-template-rows: minmax(180px, 36vh) auto; }
+  .cover .photo{ height: auto; max-height: 36vh; }
+  .cover .title{ padding: 18px 18px 28px; overflow: visible; }
+  .lot7-callout{ flex-direction: row; }
+  .lot7-thumb{ width: 96px; }
+}
+@media (max-width:520px){
+  .lot7-callout{ flex-direction: column; }
+  .lot7-thumb{ width: 100%; max-height: 140px; aspect-ratio: 16/9; }
+}
