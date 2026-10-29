@@ -95,7 +95,7 @@
         ],
         "acres": 0.81,
         "lot_dims": "168.8 \u00d7 209.1 ft",
-        "acres_source": "REALTOR.ca / property.ca MLS S13834106 (35,302 sq ft \u00f7 43,560)"
+        "acres_source": "REALTOR.ca MLS S13834106 / property.ca (35,302 sq ft \u00f7 43,560)"
       },
       {
         "address": "51 Waverley Heights, Tay",
@@ -544,7 +544,7 @@
       "depth": 209.1,
       "acres": 0.81,
       "dims": "168.8 \u00d7 209.1 ft",
-      "source": "REALTOR.ca / property.ca MLS S13834106 (35,302 sq ft \u00f7 43,560)"
+      "source": "REALTOR.ca MLS S13834106 / property.ca (35,302 sq ft \u00f7 43,560)"
     },
     "51": {
       "front": 131.23,

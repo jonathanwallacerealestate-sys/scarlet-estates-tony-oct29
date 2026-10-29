@@ -123,22 +123,14 @@
     if (mapReady || typeof L === 'undefined') return;
     var el = document.getElementById('map');
     if (!el) return;
-    var map = L.map(el, { scrollWheelZoom: false }).setView([44.6235, -79.6505], 11);
+    var map = L.map(el, { scrollWheelZoom: false }).setView([44.590715, -79.747146], 12);
     window._scarletMap = map;
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; OpenStreetMap'
     }).addTo(map);
 
-    var mg = [
-      { lat:44.6235, lng:-79.6505, label:'Scarlett Estates · Hillsdale', kind:'mg' },
-      { lat:44.6228, lng:-79.6488, label:'Lot 7 · 96 Scarlett Line (frontage)', kind:'front' },
-      { lat:44.6242, lng:-79.6520, label:'Lot 4 · 18 Rumble Crt', kind:'mg' },
-      { lat:44.6250, lng:-79.6510, label:'Lot 13 · 15 Greenlaw Crt', kind:'mg' },
-      { lat:44.6255, lng:-79.6502, label:'Lot 14 · 12 Greenlaw Crt', kind:'mg' },
-      { lat:44.7505, lng:-79.7850, label:'Swan Lane · Port McNicoll', kind:'mg' },
-      { lat:44.6350, lng:-79.7700, label:'Waverley Heights · Corsica Homes', kind:'comp' }
-    ];
+    var mg = window.SCARLET_MAP_MG || [];
     var solds = window.SCARLET_MAP_SOLDS || [];
     mg.forEach(function(p){
       var c = p.kind === 'front' ? '#1a1a1a' : (p.kind === 'comp' ? '#8b5a2b' : '#ED5D22');
@@ -147,8 +139,8 @@
     solds.forEach(function(p){
       L.marker([p.lat,p.lng], { icon: pin('#2f6fed', false) }).addTo(map).bindPopup(p.label);
     });
-    L.circle([44.6235, -79.6505], { radius: 500, color:'#ED5D22', weight:2, fillColor:'#ED5D22', fillOpacity:0.08 }).addTo(map);
-    setTimeout(function(){ map.invalidateSize(); }, 250);
+    L.circle([44.590715, -79.747146], { radius: 400, color:'#ED5D22', weight:2, fillColor:'#ED5D22', fillOpacity:0.08 }).addTo(map);
+    setTimeout(function(){ map.invalidateSize(); map.setView([44.590715, -79.747146], 13); }, 250);
     mapReady = true;
   }
 })();
