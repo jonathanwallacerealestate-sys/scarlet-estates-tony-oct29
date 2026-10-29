@@ -1,0 +1,356 @@
+{
+  "source": {
+    "email": "Listing(s) for your review",
+    "from": "notifications@em.realmmlp.ca",
+    "received_et": "2026-10-29 10:59 America/Toronto",
+    "note": "REALM client share. Sold prices from public portals cited per listing; email cards showed Sold + DOM but not sold price. Portal gallery returned HTTP 500 from the box."
+  },
+  "proposal": {
+    "site": "Scarlett Estates, Hillsdale (Springwater)",
+    "frontage_lot": {
+      "lot": "Lot 7",
+      "civic": "96 Scarlett Line",
+      "acres": 0.59,
+      "role": "Scarlet Line 1 frontage / visibility lot"
+    },
+    "spec_band": [
+      1050000,
+      1100000
+    ]
+  },
+  "mg_sites": [
+    {
+      "name": "Scarlett Estates",
+      "label": "MG \u00b7 Scarlett Estates",
+      "lat": 44.6235,
+      "lng": -79.6505,
+      "kind": "mg"
+    },
+    {
+      "name": "96 Scarlett Line (Lot 7)",
+      "label": "Frontage \u00b7 Lot 7",
+      "lat": 44.6228,
+      "lng": -79.6488,
+      "kind": "frontage"
+    },
+    {
+      "name": "18 Rumble Crt (Lot 4)",
+      "label": "Lot 4",
+      "lat": 44.6242,
+      "lng": -79.652,
+      "kind": "mg"
+    },
+    {
+      "name": "15 Greenlaw Crt (Lot 13)",
+      "label": "Lot 13",
+      "lat": 44.625,
+      "lng": -79.651,
+      "kind": "mg"
+    },
+    {
+      "name": "12 Greenlaw Crt (Lot 14)",
+      "label": "Lot 14",
+      "lat": 44.6255,
+      "lng": -79.6502,
+      "kind": "mg"
+    },
+    {
+      "name": "Swan Lane \u00b7 Port McNicoll",
+      "label": "MG \u00b7 Swan Lane",
+      "lat": 44.7505,
+      "lng": -79.785,
+      "kind": "mg"
+    },
+    {
+      "name": "Waverley Heights (Corsica)",
+      "label": "Direct competition",
+      "lat": 44.635,
+      "lng": -79.77,
+      "kind": "comp"
+    }
+  ],
+  "waverley": {
+    "builder": "Corsica Homes",
+    "community": "Waverley Heights",
+    "municipality": "Tay, Ontario",
+    "lots": "32 estate lots",
+    "location_note": "Near Hwy 93 / County Rd 27 between Midland, Elmvale and Barrie",
+    "site": "https://waverleyheights.com/",
+    "rew": "https://www.rew.ca/developments/12399/waverley-heights-tay-on",
+    "models": [
+      {
+        "address": "92 Waverley Heights, Tay",
+        "mls": "S13834106",
+        "model": "Fairweather",
+        "list": 1249000,
+        "hst": "+ HST",
+        "beds": "3",
+        "baths": "3",
+        "sqft": "2,150",
+        "style": "Detached bungalow \u00b7 3-car garage",
+        "dom": 31,
+        "sources": [
+          "realtor.ca",
+          "squareyards.ca"
+        ]
+      },
+      {
+        "address": "51 Waverley Heights, Tay",
+        "mls": "S13833802",
+        "model": null,
+        "list": 1199000,
+        "hst": "as listed",
+        "beds": "3",
+        "baths": "3",
+        "sqft": "1,500-2,000",
+        "style": "Detached bungalow",
+        "dom": 31,
+        "sources": [
+          "REALM share",
+          "rew.ca"
+        ]
+      },
+      {
+        "address": "47 Waverley Heights, Tay",
+        "mls": "S14101094",
+        "list": 1300000,
+        "beds": "3",
+        "baths": "3",
+        "sqft": "1,500-2,000",
+        "style": "Detached bungalow",
+        "dom": 8,
+        "sources": [
+          "REALM share"
+        ]
+      },
+      {
+        "address": "88 Waverley Heights, Tay",
+        "mls": "S13672732",
+        "list": 1479900,
+        "beds": "3",
+        "baths": "3",
+        "sqft": "2,000-2,500",
+        "style": "Detached bungalow",
+        "dom": 77,
+        "sources": [
+          "REALM share"
+        ]
+      }
+    ]
+  },
+  "solds": [
+    {
+      "id": "18-bridle",
+      "address": "18 Bridle Path",
+      "area": "Oro-Medonte \u00b7 Shanty Bay",
+      "pocket": "Oro-Medonte",
+      "beds": "3+1",
+      "baths": "3",
+      "sqft": "2000-2500",
+      "style": "Detached bungalow",
+      "dom": 1,
+      "mls": "S13632620",
+      "list": 1249900,
+      "sold": 1250000,
+      "sold_source": "property.ca / RealEstateBay.ca",
+      "photo": "assets/photos/18-bridle/01.jpg",
+      "lat": 44.501,
+      "lng": -79.665,
+      "features": "Central vac, family room, fireplace"
+    },
+    {
+      "id": "2-thoroughbred",
+      "address": "2 Thoroughbred Dr",
+      "area": "Oro-Medonte \u00b7 Braestone",
+      "pocket": "Braestone / Thoroughbred",
+      "beds": "3+1",
+      "baths": "3",
+      "sqft": "2000-2500",
+      "style": "Detached bungalow \u00b7 acreage",
+      "dom": 69,
+      "mls": "S13659548",
+      "list": 1275000,
+      "sold": 1200000,
+      "sold_source": "strata.ca",
+      "photo": "assets/photos/2-thoroughbred/01.jpg",
+      "lat": 44.548,
+      "lng": -79.642,
+      "features": "Fireplace, golf, greenbelt"
+    },
+    {
+      "id": "1-topaz",
+      "address": "1 Topaz Crt",
+      "area": "Oro-Medonte \u00b7 Sugarbush",
+      "pocket": "Sugarbush",
+      "beds": "3",
+      "baths": "3",
+      "sqft": "1500-2000",
+      "style": "Detached bungalow \u00b7 acreage",
+      "dom": 95,
+      "mls": "S13538672",
+      "list": 1290000,
+      "sold": 1230000,
+      "sold_source": "gta-homes.com",
+      "photo": "assets/photos/1-topaz/01.jpg",
+      "lat": 44.535,
+      "lng": -79.68,
+      "features": "Central vac, fireplace, wooded"
+    },
+    {
+      "id": "14-georgian",
+      "address": "14 Georgian Grande Dr",
+      "area": "Oro-Medonte \u00b7 Braestone",
+      "pocket": "Braestone / Thoroughbred",
+      "beds": "3",
+      "baths": "3",
+      "sqft": "2000-2500",
+      "style": "Detached bungaloft \u00b7 acreage",
+      "dom": 19,
+      "mls": "S13040266",
+      "list": 1295000,
+      "sold": 1200000,
+      "sold_source": "gta-homes.com / property.ca",
+      "photo": "assets/photos/14-georgian/01.jpg",
+      "lat": 44.55,
+      "lng": -79.64,
+      "features": "Family room, fireplace, golf"
+    },
+    {
+      "id": "67-doran",
+      "address": "67 Doran Rd",
+      "area": "Springwater \u00b7 Midhurst",
+      "pocket": "Springwater",
+      "beds": "4",
+      "baths": "3",
+      "sqft": "2500-3000",
+      "style": "Detached 2-storey \u00b7 acreage",
+      "dom": 25,
+      "mls": "S13646228",
+      "list": 1299000,
+      "sold": 1250000,
+      "sold_source": "property.ca / RealEstateBay.ca",
+      "photo": "assets/photos/67-doran/01.jpg",
+      "lat": 44.448,
+      "lng": -79.755,
+      "features": "Central vac, family room, fireplace"
+    },
+    {
+      "id": "43-thoroughbred",
+      "address": "43 Thoroughbred Dr",
+      "area": "Oro-Medonte \u00b7 Braestone",
+      "pocket": "Braestone / Thoroughbred",
+      "beds": "2",
+      "baths": "2",
+      "sqft": "1500-2000",
+      "style": "Detached bungalow \u00b7 ~1 ac",
+      "dom": 92,
+      "mls": "S12744958",
+      "list": 1335000,
+      "sold": 1290000,
+      "sold_source": "gta-homes.com",
+      "photo": "assets/photos/43-thoroughbred/01.jpg",
+      "lat": 44.549,
+      "lng": -79.638,
+      "features": "Vaulted great room, chef kitchen"
+    },
+    {
+      "id": "17-pine-ridge",
+      "address": "17 Pine Ridge Tr",
+      "area": "Oro-Medonte \u00b7 Horseshoe Valley",
+      "pocket": "Horseshoe Valley",
+      "beds": "4",
+      "baths": "4",
+      "sqft": "3500-5000",
+      "style": "Detached 2-storey",
+      "dom": 131,
+      "mls": "S12922430",
+      "list": 1398000,
+      "sold": 1300000,
+      "sold_source": "gta-homes.com",
+      "photo": "assets/photos/17-pine-ridge/01.jpg",
+      "lat": 44.552,
+      "lng": -79.675,
+      "features": "Chef kitchen, timber porch"
+    },
+    {
+      "id": "17-clydesdale",
+      "address": "17 Clydesdale Crt",
+      "area": "Oro-Medonte \u00b7 Braestone",
+      "pocket": "Braestone / Thoroughbred",
+      "beds": "3+1",
+      "baths": "4",
+      "sqft": "2000-2500",
+      "style": "Detached bungalow-raised \u00b7 ~1 ac",
+      "dom": 66,
+      "mls": "S12708264",
+      "list": 1429000,
+      "sold": 1350000,
+      "sold_source": "gta-homes.com",
+      "photo": "assets/photos/17-clydesdale/01.jpg",
+      "lat": 44.547,
+      "lng": -79.639,
+      "features": "New build, 3-car garage",
+      "note": "Listed by Faris Team"
+    },
+    {
+      "id": "3316-line4",
+      "address": "3316 Line 4 N",
+      "area": "Oro-Medonte \u00b7 Horseshoe Valley",
+      "pocket": "Horseshoe Valley",
+      "beds": "4",
+      "baths": "4",
+      "sqft": "3500-5000",
+      "style": "Detached 3-storey",
+      "dom": 22,
+      "mls": "S13084040",
+      "list": null,
+      "sold": null,
+      "sold_source": "Sold on REALM share; public sold price not confirmed",
+      "photo": null,
+      "lat": 44.555,
+      "lng": -79.69,
+      "features": "Family room, fireplace, golf"
+    }
+  ],
+  "stats": {
+    "sold_count_with_price": 8,
+    "sold_count_status_only": 1,
+    "avg_sold": 1258750,
+    "median_sold": 1250000,
+    "avg_dom": 62.2,
+    "min_sold": 1200000,
+    "max_sold": 1350000
+  },
+  "pockets": {
+    "Oro-Medonte": {
+      "count": 1,
+      "avg_sold": 1250000,
+      "median_sold": 1250000,
+      "avg_dom": 1.0
+    },
+    "Braestone / Thoroughbred": {
+      "count": 4,
+      "avg_sold": 1260000,
+      "median_sold": 1290000,
+      "avg_dom": 61.5
+    },
+    "Sugarbush": {
+      "count": 1,
+      "avg_sold": 1230000,
+      "median_sold": 1230000,
+      "avg_dom": 95.0
+    },
+    "Springwater": {
+      "count": 1,
+      "avg_sold": 1250000,
+      "median_sold": 1250000,
+      "avg_dom": 25.0
+    },
+    "Horseshoe Valley": {
+      "count": 1,
+      "avg_sold": 1300000,
+      "median_sold": 1300000,
+      "avg_dom": 131.0
+    }
+  }
+}

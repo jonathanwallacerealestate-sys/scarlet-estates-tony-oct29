@@ -1,0 +1,55 @@
+/* Scarlett Estates presentation extras (on top of MG Homes tokens) */
+#map{ width:100%; height: min(52vh, 520px); border-radius:6px; border:1px solid var(--line); z-index:1; }
+.map-wrap{ margin-top: calc(var(--u)*1.5); }
+.map-legend{ display:flex; flex-wrap:wrap; gap: calc(var(--u)*1.2); margin-top: calc(var(--u)*1.2); font-size: calc(var(--u)*1.05); color:var(--muted); }
+.map-legend span{ display:inline-flex; align-items:center; gap:8px; }
+.dot{ width:12px; height:12px; border-radius:50%; display:inline-block; }
+.dot.mg{ background:#ED5D22; }
+.dot.front{ background:#1a1a1a; box-shadow:0 0 0 3px #ED5D22; }
+.dot.sold{ background:#2f6fed; }
+.dot.comp{ background:#8b5a2b; }
+.leaflet-container{ font: inherit; }
+
+.house-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: calc(var(--u)*2); margin-top: calc(var(--u)*1.5); }
+@media (max-width:900px){ .house-grid{ grid-template-columns:1fr; } }
+.house{ background:#fff; border:1px solid var(--line); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+.house .car{ position:relative; aspect-ratio:16/10; background:#e8e2d8; }
+.house .car img{ width:100%; height:100%; object-fit:cover; }
+.house .car .ph{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:calc(var(--u)*1.1); padding:1rem; text-align:center; }
+.house .body{ padding: calc(var(--u)*1.6) calc(var(--u)*1.8); display:flex; flex-direction:column; gap:6px; }
+.house .addr{ font-family:var(--serif); font-size: calc(var(--u)*1.55); color:var(--char); }
+.house .area{ font-size: calc(var(--u)*1.05); color:var(--muted); }
+.house .facts{ display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+.house .facts span{ background:var(--warm); border:1px solid var(--line); border-radius:999px; padding:3px 10px; font-size: calc(var(--u)*.95); }
+.house .price{ margin-top:8px; font-weight:700; font-size: calc(var(--u)*1.45); color:var(--orange); }
+.house .price small{ display:block; font-weight:500; color:var(--muted); font-size: calc(var(--u)*.95); margin-top:2px; }
+.house .cite{ font-size: calc(var(--u)*.85); color:var(--muted); margin-top:4px; }
+
+.price-compare{ display:grid; grid-template-columns: 1fr auto 1fr; gap: calc(var(--u)*2); align-items:stretch; margin-top: calc(var(--u)*2); }
+.price-card{ border:1px solid var(--line); border-radius:8px; padding: calc(var(--u)*2.2); background:#fff; }
+.price-card.highlight{ border-color:var(--orange); box-shadow:0 0 0 3px rgba(237,93,34,.15); }
+.price-card .tag{ font-size: calc(var(--u)*.95); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.price-card .band{ font-family:var(--serif); font-size: calc(var(--u)*3.2); color:var(--char); margin: calc(var(--u)*1) 0; }
+.price-card.highlight .band{ color:var(--orange); }
+.price-card ul{ margin:0; padding-left:1.1em; color:var(--muted); font-size: calc(var(--u)*1.1); }
+.vs{ align-self:center; font-weight:700; color:var(--muted); letter-spacing:.1em; }
+
+.stat-row{ display:grid; grid-template-columns: repeat(4,1fr); gap: calc(var(--u)*1.5); margin-top: calc(var(--u)*2); }
+.stat{ background:#fff; border:1px solid var(--line); border-radius:6px; padding: calc(var(--u)*1.6); }
+.stat .k{ font-size: calc(var(--u)*.9); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.stat .v{ font-family:var(--serif); font-size: calc(var(--u)*2.4); color:var(--char); margin-top:4px; }
+.dark .stat{ background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.12); }
+.dark .stat .v{ color:#fff; }
+
+.comp-table{ width:100%; border-collapse:collapse; margin-top: calc(var(--u)*1.5); font-size: calc(var(--u)*1.1); }
+.comp-table th,.comp-table td{ text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); }
+.comp-table th{ color:var(--muted); font-weight:600; font-size: calc(var(--u)*.95); letter-spacing:.04em; text-transform:uppercase; }
+.cite-block{ margin-top: calc(var(--u)*1.5); font-size: calc(var(--u)*.9); color:var(--muted); line-height:1.45; }
+.cite-block a{ color:inherit; }
+
+.pocket-sum{ display:grid; grid-template-columns: repeat(3,1fr); gap: calc(var(--u)*1.5); margin-top: calc(var(--u)*1.5); }
+@media (max-width:900px){
+  .price-compare{ grid-template-columns:1fr; }
+  .vs{ display:none; }
+  .stat-row,.pocket-sum{ grid-template-columns:1fr 1fr; }
+}
