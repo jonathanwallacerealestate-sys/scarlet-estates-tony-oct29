@@ -119,11 +119,27 @@
     }, {passive:true});
   });
 
+  function fitAllMarkers(map){
+    var pts = window._scarletMapPoints || [];
+    if (!map || !pts.length) return;
+    map.invalidateSize();
+    var bounds = L.latLngBounds(pts);
+    map.fitBounds(bounds, { padding: [48, 48], maxZoom: 12, animate: false });
+  }
+
   function ensureMap(){
-    if (mapReady || typeof L === 'undefined') return;
+    if (typeof L === 'undefined') return;
     var el = document.getElementById('map');
     if (!el) return;
-    var map = L.map(el, { scrollWheelZoom: false }).setView([44.590715, -79.747146], 12);
+
+    // Already built: just reflow + fit all markers when the map slide is shown
+    if (mapReady && window._scarletMap){
+      fitAllMarkers(window._scarletMap);
+      setTimeout(function(){ fitAllMarkers(window._scarletMap); }, 200);
+      return;
+    }
+
+    var map = L.map(el, { scrollWheelZoom: false }).setView([44.65, -79.78], 10);
     window._scarletMap = map;
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
@@ -132,15 +148,24 @@
 
     var mg = window.SCARLET_MAP_MG || [];
     var solds = window.SCARLET_MAP_SOLDS || [];
+    var pts = [];
     mg.forEach(function(p){
+      if (p.lat == null || p.lng == null) return;
+      pts.push([p.lat, p.lng]);
       var c = p.kind === 'front' ? '#1a1a1a' : (p.kind === 'comp' ? '#8b5a2b' : '#ED5D22');
       L.marker([p.lat,p.lng], { icon: pin(c, p.kind==='front') }).addTo(map).bindPopup(p.label);
     });
     solds.forEach(function(p){
+      if (p.lat == null || p.lng == null) return;
+      pts.push([p.lat, p.lng]);
       L.marker([p.lat,p.lng], { icon: pin('#2f6fed', false) }).addTo(map).bindPopup(p.label);
     });
+    window._scarletMapPoints = pts;
     L.circle([44.590715, -79.747146], { radius: 400, color:'#ED5D22', weight:2, fillColor:'#ED5D22', fillOpacity:0.08 }).addTo(map);
-    setTimeout(function(){ map.invalidateSize(); map.setView([44.590715, -79.747146], 13); }, 250);
     mapReady = true;
+    // Fit on load (and again after layout settles)
+    fitAllMarkers(map);
+    setTimeout(function(){ fitAllMarkers(map); }, 250);
+    setTimeout(function(){ fitAllMarkers(map); }, 600);
   }
 })();
